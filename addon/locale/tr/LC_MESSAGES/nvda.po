@@ -1,0 +1,14 @@
+msgid ""
+msgstr ""
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Language: tr\n"
+
+msgid "Koruz.biz MurText"
+msgstr "Körüz.biz MurText"
+
+msgid "An NVDA plug-in for the MurText application, which transcribes audio/video files and WhatsApp voice messages in 100 languages."
+msgstr "100 dilde ses/video dosyalarını ve WhatsApp sesli mesajlarını transkripsiyon yapan MurText uygulaması için NVDA eklentisi."
+
+msgid "Free and unlimited transcription! With a single shortcut, transcribe audio/video files and WhatsApp voice messages instantly. Use the same shortcut to quickly save other files from the WhatsApp desktop app."
+msgstr "Ücretsiz ve sınırsız transkripsiyon! Tek bir kısayolla, ses/video dosyalarını ve WhatsApp sesli mesajlarını transkripsiyon yapın. Aynı kısayolla WhatsApp masaüstü uygulamasındaki diğer dosyalarınızı hızlı kaydedin."

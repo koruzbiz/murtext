@@ -1,0 +1,99 @@
+msgid ""
+msgstr ""
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Language: tr\n"
+
+# Genel
+msgid "MurText"
+msgstr "MurText"
+
+msgid "Koruz.biz MurText"
+msgstr "Körüz.biz MurText"
+
+msgid "An NVDA add-on that transcribes audio/video files on your computer and WhatsApp voice messages into text in 100 languages."
+msgstr "Bilgisayardaki ses/video dosyalarını ve WhatsApp ses dosyalarını 100 dilde yazıya dönüştüren MurText eklentisi."
+
+msgid "With a single shortcut, transcribe audio/video files on your PC and WhatsApp Desktop with no time limits. Save .doc, .zip and similar files from WhatsApp with the same shortcut."
+msgstr "Tek kısayolla bilgisayarınızdaki ve WhatsApp Masaüstü'ndeki ses/video dosyaları sınırsız sürede transkribe edin. WhatsApp'taki .doc, .zip vb. dosyaları aynı kısayolla kaydedin."
+
+msgid "Default file save location"
+msgstr "Varsayılan dosya kayıt yeri"
+
+msgid "Select the save folder"
+msgstr "Kayıt klasörünü seçin"
+
+msgid "Default save folder for MurText"
+msgstr "MurText için varsayılan kayıt klasörü"
+
+msgid "Browse"
+msgstr "Göz at"
+
+msgid "copy"
+msgstr "kopyala"
+
+msgid "Copy"
+msgstr "Kopyala"
+
+msgid "desktop"
+msgstr "masaüstü"
+
+msgid "Desktop"
+msgstr "Masaüstü"
+
+msgid "explorer"
+msgstr "dosya gezgini"
+
+msgid "Explorer"
+msgstr "Dosya gezgini"
+
+# WhatsApp
+msgid "The file was saved with MurText."
+msgstr "Dosya MurText ile kaydedildi."
+
+msgid "The file could not be saved."
+msgstr "Dosya kaydedilemedi."
+
+msgid "Could not click the Copy option."
+msgstr "Kopyala seçeneğine tıklanamadı."
+
+msgid "Failed to open the menu."
+msgstr "Menü açma işlemi başarısız."
+
+msgid "WhatsApp is not focused."
+msgstr "WhatsApp odağı yok."
+
+msgid "Context menu not found."
+msgstr "Bağlam menüsü bulunamadı."
+
+msgid "The file has not been downloaded yet or the Copy option is unavailable."
+msgstr "Dosya henüz bilgisayara indirilmemiş veya kopyala seçeneği yok."
+
+# Hata mesajları 
+msgid "An error occurred."
+msgstr "Bir hata oluştu."
+
+msgid "Invalid procedure or file path."
+msgstr "Geçersiz yordam veya dosya yolu."
+
+msgid "Failed to retrieve file from clipboard."
+msgstr "Panodan dosya alınamadı."
+
+msgid "An error occurred while identifying the application."
+msgstr "Uygulama belirlenirken bir hata oluştu."
+
+# Mesajlar
+msgid "Opening with MurText. Preparing the application."
+msgstr "MurText ile açılıyor. Uygulama hazırlanıyor."
+
+msgid "The selected item is not supported by MurText."
+msgstr "Seçilen öğe MurText tarafından desteklenmiyor."
+
+msgid "MurText not found"
+msgstr "MurText bulunamadı"
+
+msgid "You cannot proceed without MurText, a free application. Would you like to download it?"
+msgstr "Ücretsiz bir uygulama olan MurText olmadan devam edemezsiniz. İndirmek ister misiniz?"
+
+msgid "The MurText add-on is not configured for this application."
+msgstr "MurText eklentisi bu uygulama için yapılandırılmamış."

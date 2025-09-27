@@ -1,0 +1,43 @@
+# Orijinal ignore listesi
+addon/doc/*.css
+addon/doc/en/
+*_docHandler.py
+*.html
+manifest.ini
+addon/doc/*.mo
+*.pot
+*.py[co]
+*.nvda-addon
+.sconsign.dblite
+/[0-9]*.[0-9]*.[0-9]*.json
+# Orijinal ignore listesisonu
+
+# devre dışı bırakmalar
+pycache__/
+*.py[cod]
+
+# SCons / build artifaktları
+.sconsign.dblite
+*.nvda-addon
+
+# Otomatik üretilen .pot dosyaları (isteğe bağlı)
+*.pot
+
+# Log ve geçici dosyalar
+*.log
+*.tmp
+
+# Yerel, kişisel veya geçici araç dosyaları
+.igonere/*.txt
+.igonere/*.bat
+
+# Ceviri dosyaları (yerelde kalacak)
+no_push/
+
+# Yerel araçlar / scriptler: bat ve txt dosyaları repoya gitmesin
+*.bat
+*.txt
+
+# Dist / build çıktıları
+/dist
+/build
