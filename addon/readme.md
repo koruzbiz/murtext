@@ -1,5 +1,4 @@
-﻿
-# Koruz.biz MurText
+﻿# Koruz.biz MurText
 
 **Author:** Murat Kefeli – Koruz.biz (We Are an Association for the Blind) – https://koruz.biz  
 **NVDA Compatibility:** Version 2022.1 and later
@@ -18,5 +17,5 @@ Use the same shortcut to quickly save other files from the WhatsApp desktop app.
 * No limitations on file size or duration.
 * The shortcut key is multifunctional:
 
-  * In WhatsApp, it transcribes voice messages.
+  * In WhatsApp, it transcribes voice messages...
   * For other file types, it saves the file to your default directory.
