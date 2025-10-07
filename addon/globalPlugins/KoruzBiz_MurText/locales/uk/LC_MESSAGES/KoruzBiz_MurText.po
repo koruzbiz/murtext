@@ -1,0 +1,100 @@
+msgid ""
+msgstr ""
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Language: uk\n"
+
+# Genel
+msgid "MurText"
+msgstr "MurText"
+
+msgid "Koruz.biz MurText"
+msgstr "Koruz.biz MurText"
+
+msgid "An NVDA add-on that transcribes audio/video files on your computer and WhatsApp voice messages into text in 100 languages."
+msgstr "Додаток NVDA, який перетворює аудіо- та відеофайли на вашому комп’ютері, а також голосові повідомлення WhatsApp у текст понад 100 мовами."
+
+msgid "With a single shortcut, transcribe audio/video files on your PC and WhatsApp Desktop with no time limits. Save .doc, .zip and similar files from WhatsApp with the same shortcut."
+msgstr "За допомогою однієї комбінації клавіш можна без обмежень транскрибувати аудіо- та відеофайли на вашому ПК і в WhatsApp Desktop. Використовуйте ту саму комбінацію, щоб зберігати файли .doc, .zip та інші з WhatsApp."
+
+msgid "Default file save location"
+msgstr "Типове місце збереження файлів"
+
+msgid "Select the save folder"
+msgstr "Виберіть теку для збереження"
+
+msgid "Default save folder for MurText"
+msgstr "Типова тека для  збереження MurText"
+
+msgid "Browse"
+msgstr "Огляд"
+
+msgid "copy"
+msgstr "Копіювати"
+
+msgid "Copy"
+msgstr "Копіювати"
+
+msgid "desktop"
+msgstr "робочий стіл"
+
+msgid "Desktop"
+msgstr "Робочий стіл"
+
+msgid "explorer"
+msgstr "провідник"
+
+msgid "Explorer"
+msgstr "Провідник"
+
+# WhatsApp
+msgid "The file was saved with MurText."
+msgstr "Файл збережено за допомогою MurText."
+
+msgid "The file could not be saved."
+msgstr "Не вдалося зберегти файл."
+
+msgid "Could not click the Copy option."
+msgstr "Не вдалося натиснути пункт «Копіювати»."
+
+msgid "Failed to open the menu."
+msgstr "Не вдалося відкрити меню."
+
+msgid "WhatsApp is not focused."
+msgstr "Вікно WhatsApp не у фокусі."
+
+msgid "Context menu not found."
+msgstr "Контекстне меню не знайдено"
+
+msgid "The file has not been downloaded yet or the Copy option is unavailable."
+msgstr "Файл ще не завантажено або опція «Копіювати» недоступна."
+
+# Hata mesajları 
+msgid "An error occurred."
+msgstr "Сталася помилка."
+
+msgid "Invalid procedure or file path."
+msgstr "Неправильна процедура або шлях до файлу"
+
+msgid "Failed to retrieve file from clipboard."
+msgstr "Не вдалося отримати файл із буфера обміну"
+
+msgid "An error occurred while identifying the application."
+msgstr "Під час визначення програми сталася помилка."
+
+# Mesajlar
+msgid "Opening with MurText. Preparing the application."
+msgstr "Відкриття через MurText. Підготовка програми..."
+
+msgid "The selected item is not supported by MurText."
+msgstr "Вибраний елемент не підтримується MurText."
+
+msgid "MurText not found"
+msgstr "MurText не знайдено"
+
+msgid "You cannot proceed without MurText, a free application. Would you like to download it?"
+msgstr "Ви не можете продовжити без MurText — безкоштовної програми. Завантажити зараз?"
+
+
+msgid "The MurText add-on is not configured for this application."
+msgstr "Додаток MurText не налаштований для цієї програми"

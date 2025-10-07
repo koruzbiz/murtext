@@ -1,6 +1,6 @@
 ﻿# -*- coding: utf-8 -*-
 # Plug-in version: 1.9
-# Murdext compatible version: 1.3.9 - 2.0+
+# Murdext compatible version: 2.0.2
 
 # Standart modüller / Standard Modules
 import datetime
@@ -683,7 +683,7 @@ def MurText_prompt_to_install_if_missing():
 
             if res == wx.ID_YES:
                 try:
-                    webbrowser.open("https://MurText.org?page=download", new=1)
+                    webbrowser.open("https://MurText.org?page=download&source=nvda", new=1)
                 except Exception as e:
                     MurText_log_debug(f"[Prompt] URL açılamadı: {e}", g=5, t=0)
             elif res == wx.ID_NO:

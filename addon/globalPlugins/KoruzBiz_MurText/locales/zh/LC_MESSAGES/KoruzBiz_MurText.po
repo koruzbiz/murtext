@@ -1,0 +1,99 @@
+msgid ""
+msgstr ""
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Language: zh\n"
+
+# Genel
+msgid "MurText"
+msgstr "MurText"
+
+msgid "Koruz.biz MurText"
+msgstr "Koruz.biz MurText"
+
+msgid "An NVDA add-on that transcribes audio/video files on your computer and WhatsApp voice messages into text in 100 languages."
+msgstr "一个 NVDA 插件，可将您电脑上的音频/视频文件和 WhatsApp 语音消息转录为 100 种语言的文本。"
+
+msgid "With a single shortcut, transcribe audio/video files on your PC and WhatsApp Desktop with no time limits. Save .doc, .zip and similar files from WhatsApp with the same shortcut."
+msgstr "只需一个快捷键，即可无限制地转录 PC 和 WhatsApp 桌面上的音频/视频文件。还可以用同一快捷键保存来自 WhatsApp 的 .doc、.zip 等文件。"
+
+msgid "Default file save location"
+msgstr "默认文件保存位置"
+
+msgid "Select the save folder"
+msgstr "选择保存文件夹"
+
+msgid "Default save folder for MurText"
+msgstr "MurText 的默认保存文件夹"
+
+msgid "Browse"
+msgstr "浏览"
+
+msgid "copy"
+msgstr "复制"
+
+msgid "Copy"
+msgstr "复制"
+
+msgid "desktop"
+msgstr "桌面"
+
+msgid "Desktop"
+msgstr "桌面"
+
+msgid "explorer"
+msgstr "资源管理器"
+
+msgid "Explorer"
+msgstr "资源管理器"
+
+# WhatsApp
+msgid "The file was saved with MurText."
+msgstr "文件已通过 MurText 保存。"
+
+msgid "The file could not be saved."
+msgstr "文件无法保存。"
+
+msgid "Could not click the Copy option."
+msgstr "无法点击复制选项。"
+
+msgid "Failed to open the menu."
+msgstr "菜单打开失败。"
+
+msgid "WhatsApp is not focused."
+msgstr "WhatsApp 未获得焦点。"
+
+msgid "Context menu not found."
+msgstr "未找到上下文菜单。"
+
+msgid "The file has not been downloaded yet or the Copy option is unavailable."
+msgstr "文件尚未下载，或复制选项不可用。"
+
+# Hata mesajları 
+msgid "An error occurred."
+msgstr "发生错误。"
+
+msgid "Invalid procedure or file path."
+msgstr "无效的过程或文件路径。"
+
+msgid "Failed to retrieve file from clipboard."
+msgstr "无法从剪贴板获取文件。"
+
+msgid "An error occurred while identifying the application."
+msgstr "识别应用程序时发生错误。"
+
+# Mesajlar
+msgid "Opening with MurText. Preparing the application."
+msgstr "正在用 MurText 打开。应用正在准备中。"
+
+msgid "The selected item is not supported by MurText."
+msgstr "所选项目不受 MurText 支持。"
+
+msgid "MurText not found"
+msgstr "未找到 MurText"
+
+msgid "You cannot proceed without MurText, a free application. Would you like to download it?"
+msgstr "没有免费的 MurText 应用，您无法继续。是否要下载？"
+
+msgid "The MurText add-on is not configured for this application."
+msgstr "MurText 插件未为此应用配置。"

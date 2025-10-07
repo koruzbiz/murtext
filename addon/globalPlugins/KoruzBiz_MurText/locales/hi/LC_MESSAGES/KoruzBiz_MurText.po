@@ -1,0 +1,99 @@
+msgid ""
+msgstr ""
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Language: hi\n"
+
+# Genel
+msgid "MurText"
+msgstr "MurText"
+
+msgid "Koruz.biz MurText"
+msgstr "Koruz.biz MurText"
+
+msgid "An NVDA add-on that transcribes audio/video files on your computer and WhatsApp voice messages into text in 100 languages."
+msgstr "एक NVDA ऐड-ऑन जो आपके कंप्यूटर पर ऑडियो/वीडियो फ़ाइलों और WhatsApp वॉइस संदेशों को 100 भाषाओं में टेक्स्ट में ट्रांसक्राइब करता है।"
+
+msgid "With a single shortcut, transcribe audio/video files on your PC and WhatsApp Desktop with no time limits. Save .doc, .zip and similar files from WhatsApp with the same shortcut."
+msgstr "सिर्फ एक शॉर्टकट से, अपने पीसी और WhatsApp डेस्कटॉप पर ऑडियो/वीडियो फ़ाइलों को बिना समय सीमा के ट्रांसक्राइब करें। उसी शॉर्टकट से WhatsApp से .doc, .zip और इसी तरह की फ़ाइलें सहेजें।"
+
+msgid "Default file save location"
+msgstr "डिफ़ॉल्ट फ़ाइल सहेजने का स्थान"
+
+msgid "Select the save folder"
+msgstr "सहेजने का फ़ोल्डर चुनें"
+
+msgid "Default save folder for MurText"
+msgstr "MurText के लिए डिफ़ॉल्ट सहेजने का फ़ोल्डर"
+
+msgid "Browse"
+msgstr "ब्राउज़ करें"
+
+msgid "copy"
+msgstr "कॉपी"
+
+msgid "Copy"
+msgstr "कॉपी"
+
+msgid "desktop"
+msgstr "डेस्कटॉप"
+
+msgid "Desktop"
+msgstr "डेस्कटॉप"
+
+msgid "explorer"
+msgstr "एक्सप्लोरर"
+
+msgid "Explorer"
+msgstr "एक्सप्लोरर"
+
+# WhatsApp
+msgid "The file was saved with MurText."
+msgstr "फ़ाइल MurText के साथ सहेजी गई।"
+
+msgid "The file could not be saved."
+msgstr "फ़ाइल सहेजी नहीं जा सकी।"
+
+msgid "Could not click the Copy option."
+msgstr "कॉपी विकल्प पर क्लिक नहीं किया जा सका।"
+
+msgid "Failed to open the menu."
+msgstr "मेनू खोलने में विफल।"
+
+msgid "WhatsApp is not focused."
+msgstr "WhatsApp सक्रिय नहीं है।"
+
+msgid "Context menu not found."
+msgstr "संदर्भ मेनू नहीं मिला।"
+
+msgid "The file has not been downloaded yet or the Copy option is unavailable."
+msgstr "फ़ाइल अभी तक डाउनलोड नहीं हुई है या कॉपी विकल्प उपलब्ध नहीं है।"
+
+# Hata mesajları 
+msgid "An error occurred."
+msgstr "एक त्रुटि हुई।"
+
+msgid "Invalid procedure or file path."
+msgstr "अमान्य प्रक्रिया या फ़ाइल पथ।"
+
+msgid "Failed to retrieve file from clipboard."
+msgstr "क्लिपबोर्ड से फ़ाइल प्राप्त करने में विफल।"
+
+msgid "An error occurred while identifying the application."
+msgstr "एप्लिकेशन की पहचान करते समय एक त्रुटि हुई।"
+
+# Mesajlar
+msgid "Opening with MurText. Preparing the application."
+msgstr "MurText के साथ खोला जा रहा है। एप्लिकेशन तैयार किया जा रहा है।"
+
+msgid "The selected item is not supported by MurText."
+msgstr "चयनित आइटम MurText द्वारा समर्थित नहीं है।"
+
+msgid "MurText not found"
+msgstr "MurText नहीं मिला"
+
+msgid "You cannot proceed without MurText, a free application. Would you like to download it?"
+msgstr "आप मुफ्त एप्लिकेशन MurText के बिना आगे नहीं बढ़ सकते। क्या आप इसे डाउनलोड करना चाहेंगे?"
+
+msgid "The MurText add-on is not configured for this application."
+msgstr "MurText ऐड-ऑन इस एप्लिकेशन के लिए कॉन्फ़िगर नहीं किया गया है।"

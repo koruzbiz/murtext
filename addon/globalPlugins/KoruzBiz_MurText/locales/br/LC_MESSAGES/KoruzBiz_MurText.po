@@ -1,0 +1,93 @@
+msgid ""
+msgstr ""
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Language: pt_BR\n"
+
+# Geral
+msgid "MurText"
+msgstr "MurText"
+
+msgid "Koruz.biz MurText"
+msgstr "Koruz.biz MurText"
+
+msgid "Default file save location"
+msgstr "Local padrão para salvar arquivos"
+
+msgid "Select the save folder"
+msgstr "Selecionar pasta de salvamento"
+
+msgid "Default save folder for MurText"
+msgstr "Pasta padrão de salvamento para MurText"
+
+msgid "Browse"
+msgstr "Procurar"
+
+msgid "copy"
+msgstr "copiar"
+
+msgid "Copy"
+msgstr "Copiar"
+
+msgid "desktop"
+msgstr "área de trabalho"
+
+msgid "Desktop"
+msgstr "Área de trabalho"
+
+msgid "explorer"
+msgstr "explorador de arquivos"
+
+msgid "Explorer"
+msgstr "Explorador de arquivos"
+
+# WhatsApp
+msgid "The file was saved with MurText."
+msgstr "O arquivo foi salvo com MurText."
+
+msgid "The file could not be saved."
+msgstr "Não foi possível salvar o arquivo."
+
+msgid "Could not click the Copy option."
+msgstr "Não foi possível clicar na opção Copiar."
+
+msgid "Failed to open the menu."
+msgstr "Falha ao abrir o menu."
+
+msgid "WhatsApp is not focused."
+msgstr "O WhatsApp não está em foco."
+
+msgid "Context menu not found."
+msgstr "Menu de contexto não encontrado."
+
+msgid "The file has not been downloaded yet or the Copy option is unavailable."
+msgstr "O arquivo ainda não foi baixado ou a opção Copiar está indisponível."
+
+# Mensagens de erro
+msgid "An error occurred."
+msgstr "Ocorreu um erro."
+
+msgid "Invalid procedure or file path."
+msgstr "Procedimento ou caminho de arquivo inválido."
+
+msgid "Failed to retrieve file from clipboard."
+msgstr "Falha ao obter o arquivo da área de transferência."
+
+msgid "An error occurred while identifying the application."
+msgstr "Ocorreu um erro ao identificar o aplicativo."
+
+# Mensagens
+msgid "Opening with MurText. Preparing the application."
+msgstr "Abrindo com MurText. Preparando o aplicativo."
+
+msgid "The selected item is not supported by MurText."
+msgstr "O item selecionado não é compatível com MurText."
+
+msgid "MurText not found"
+msgstr "MurText não encontrado"
+
+msgid "You cannot proceed without MurText, a free application. Would you like to download it?"
+msgstr "Você não pode continuar sem o MurText, um aplicativo gratuito. Deseja baixá-lo?"
+
+msgid "The MurText add-on is not configured for this application."
+msgstr "O complemento MurText não está configurado para este aplicativo."

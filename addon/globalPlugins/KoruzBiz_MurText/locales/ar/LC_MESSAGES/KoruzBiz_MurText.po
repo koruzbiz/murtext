@@ -1,0 +1,93 @@
+msgid ""
+msgstr ""
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Language: ar\n"
+
+# عام
+msgid "MurText"
+msgstr "MurText"
+
+msgid "Koruz.biz MurText"
+msgstr "كوروز.بيز MurText"
+
+msgid "Default file save location"
+msgstr "الموقع الافتراضي لحفظ الملفات"
+
+msgid "Select the save folder"
+msgstr "اختر مجلد الحفظ"
+
+msgid "Default save folder for MurText"
+msgstr "مجلد الحفظ الافتراضي لـ MurText"
+
+msgid "Browse"
+msgstr "استعراض"
+
+msgid "copy"
+msgstr "نسخ"
+
+msgid "Copy"
+msgstr "نسخ"
+
+msgid "desktop"
+msgstr "سطح المكتب"
+
+msgid "Desktop"
+msgstr "سطح المكتب"
+
+msgid "explorer"
+msgstr "مستعرض الملفات"
+
+msgid "Explorer"
+msgstr "مستعرض الملفات"
+
+# واتساب
+msgid "The file was saved with MurText."
+msgstr "تم حفظ الملف باستخدام MurText."
+
+msgid "The file could not be saved."
+msgstr "تعذر حفظ الملف."
+
+msgid "Could not click the Copy option."
+msgstr "تعذر النقر على خيار النسخ."
+
+msgid "Failed to open the menu."
+msgstr "فشل في فتح القائمة."
+
+msgid "WhatsApp is not focused."
+msgstr "واتساب ليس في وضع التركيز."
+
+msgid "Context menu not found."
+msgstr "لم يتم العثور على القائمة السياقية."
+
+msgid "The file has not been downloaded yet or the Copy option is unavailable."
+msgstr "لم يتم تنزيل الملف بعد أو خيار النسخ غير متاح."
+
+# رسائل الخطأ
+msgid "An error occurred."
+msgstr "حدث خطأ."
+
+msgid "Invalid procedure or file path."
+msgstr "إجراء أو مسار ملف غير صالح."
+
+msgid "Failed to retrieve file from clipboard."
+msgstr "فشل في استرداد الملف من الحافظة."
+
+msgid "An error occurred while identifying the application."
+msgstr "حدث خطأ أثناء تحديد التطبيق."
+
+# الرسائل
+msgid "Opening with MurText. Preparing the application."
+msgstr "يتم الفتح باستخدام MurText. جاري إعداد التطبيق."
+
+msgid "The selected item is not supported by MurText."
+msgstr "العنصر المحدد غير مدعوم من قبل MurText."
+
+msgid "MurText not found"
+msgstr "لم يتم العثور على MurText"
+
+msgid "You cannot proceed without MurText, a free application. Would you like to download it?"
+msgstr "لا يمكنك المتابعة بدون MurText، وهو تطبيق مجاني. هل ترغب في تنزيله؟"
+
+msgid "The MurText add-on is not configured for this application."
+msgstr "لم يتم تكوين إضافة MurText لهذا التطبيق."
