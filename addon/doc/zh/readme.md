@@ -1,7 +1,13 @@
 ﻿
-# \# Koruz.biz MurText
-**作者：** Murat Kefeli – Koruz.biz 协会 – \[https://koruz.biz](https://koruz.biz)  
-**NVDA 兼容性：** 2024.3 及更高版本  
+# Koruz.biz MurText
+
+**作者:** Murat Kefeli – Koruz.biz (盲人协会) – https://koruz.biz  
+**NVDA 兼容性:** 版本 2022.1 及以上  
+
+**如需更快反馈，请使用：[https://koruz.biz/ekle.asp?mainID=AM6PcMeY&refID=AM6PcMeY&langID=1](https://koruz.biz/ekle.asp?mainID=AM6PcMeY&refID=AM6PcMeY&langID=1)**
+**[点击此处下载最新版本](https://murtext.org?page=nvda)**
+
+使用标题快捷键 (1) 查看发行说明。
 
 ## MurText
 功能介绍
@@ -20,4 +26,9 @@
 	- 对于其他文件类型，将文件保存到默认目录。  
 
 
+# 发行说明
+## 2.1.1
+• 为 WhatsApp Desktop 添加了标签识别功能。如果出现“无法点击复制菜单”警告，请打开 NVDA 设置 → Koruz.biz MurText 类别，并按 WhatsApp 上的显示保存复制标签。
 
+## 2.0.2
+• 更新了语言包。

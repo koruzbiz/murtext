@@ -50,8 +50,8 @@ msgstr "Файл был сохранён с помощью MurText."
 msgid "The file could not be saved."
 msgstr "Не удалось сохранить файл."
 
-msgid "Could not click the Copy option."
-msgstr "Не удалось нажать на опцию «Копировать»."
+msgid "Could not click the Copy option. Please open the Settings dialog and save the Copy label you see in WhatsApp’s context menu."
+msgstr "Не удалось нажать параметр Копировать. Откройте диалоговое окно настроек и сохраните метку Копировать, которую вы видите в контекстном меню WhatsApp."
 
 msgid "Failed to open the menu."
 msgstr "Не удалось открыть меню."
@@ -62,8 +62,11 @@ msgstr "Окно WhatsApp не в фокусе."
 msgid "Context menu not found."
 msgstr "Контекстное меню не найдено."
 
-msgid "The file has not been downloaded yet or the Copy option is unavailable."
-msgstr "Файл ещё не загружен или опция «Копировать» недоступна."
+msgid "The file has not been downloaded yet or the Copy option is unavailable. Please open the Settings dialog and save the Copy label you see in WhatsApp’s context menu."
+msgstr "Файл еще не загружен или параметр Копировать недоступен. Откройте диалоговое окно настроек и сохраните метку Копировать, которую вы видите в контекстном меню WhatsApp."
+
+msgid "Define the Copy label in WhatsApp Desktop."
+msgstr "Определите метку Копировать в WhatsApp Desktop."
 
 # Сообщения об ошибках
 msgid "An error occurred."

@@ -7,8 +7,8 @@ msgstr ""
 msgid "Koruz.biz MurText"
 msgstr "Körüz.biz MurText"
 
-msgid "An NVDA plug-in for the MurText application, which transcribes audio/video files and WhatsApp voice messages in 100 languages."
-msgstr "100 dilde ses/video dosyalarını ve WhatsApp sesli mesajlarını transkripsiyon yapan MurText uygulaması için NVDA eklentisi."
+msgid "An NVDA add-on for the MurText application that converts audio/video files and WhatsApp voice messages into text in over 100 languages. Free and unlimited speech-to-text conversion! With a single shortcut, instantly convert audio/video files and WhatsApp voice messages into text. Use the same shortcut to quickly save other files from the WhatsApp desktop app."
+msgstr "Ses/video dosyalarını ve WhatsApp sesli mesajlarını 100'den fazla dilde metne dönüştüren MurText uygulaması için NVDA eklentisi. Ücretsiz ve sınırsız konuşmadan metne dönüştürme! Tek bir kısayolla ses/video dosyalarını ve WhatsApp sesli mesajlarını anında metne dönüştürün. WhatsApp masaüstü uygulamasındaki diğer dosyaları hızla kaydetmek için aynı kısayolu kullanın."
 
-msgid "Free and unlimited transcription! With a single shortcut, transcribe audio/video files and WhatsApp voice messages instantly. Use the same shortcut to quickly save other files from the WhatsApp desktop app."
-msgstr "Ücretsiz ve sınırsız transkripsiyon! Tek bir kısayolla, ses/video dosyalarını ve WhatsApp sesli mesajlarını transkripsiyon yapın. Aynı kısayolla WhatsApp masaüstü uygulamasındaki diğer dosyalarınızı hızlı kaydedin."
+msgid "Added label recognition feature for WhatsApp Desktop. If you get the warning Could not click on the Copy menu, open NVDA Settings → Koruz.biz MurText category, and save the Copy label as it appears in your WhatsApp context menu."
+msgstr "WhatsApp Masaüstü için etiket tanıma özelliği eklendi. Kopyala menüsüne tıklanamadı uyarısını alırsanız, NVDA Ayarları → Koruz.biz MurText kategorisini açın ve Kopyala etiketini WhatsApp içerik menünüzde göründüğü şekilde kaydedin."

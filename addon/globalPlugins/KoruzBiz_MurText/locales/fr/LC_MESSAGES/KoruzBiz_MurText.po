@@ -48,8 +48,8 @@ msgstr "Le fichier a été enregistré avec MurText."
 msgid "The file could not be saved."
 msgstr "Le fichier n'a pas pu être enregistré."
 
-msgid "Could not click the Copy option."
-msgstr "Impossible de cliquer sur l'option Copier."
+msgid "Could not click the Copy option. Please open the Settings dialog and save the Copy label you see in WhatsApp’s context menu."
+msgstr "Impossible de cliquer sur l’option Copier. Ouvrez la boîte de dialogue des paramètres et enregistrez l’étiquette Copier que vous voyez dans le menu contextuel de WhatsApp."
 
 msgid "Failed to open the menu."
 msgstr "Échec de l'ouverture du menu."
@@ -60,8 +60,11 @@ msgstr "WhatsApp n'est pas actif."
 msgid "Context menu not found."
 msgstr "Menu contextuel introuvable."
 
-msgid "The file has not been downloaded yet or the Copy option is unavailable."
-msgstr "Le fichier n'a pas encore été téléchargé ou l'option Copier est indisponible."
+msgid "The file has not been downloaded yet or the Copy option is unavailable. Please open the Settings dialog and save the Copy label you see in WhatsApp’s context menu."
+msgstr "Le fichier n’a pas encore été téléchargé ou l’option Copier n’est pas disponible. Ouvrez la boîte de dialogue des paramètres et enregistrez l’étiquette Copier que vous voyez dans le menu contextuel de WhatsApp."
+
+msgid "Define the Copy label in WhatsApp Desktop."
+msgstr "Définissez l’étiquette Copier dans WhatsApp Desktop."
 
 # Messages d'erreur
 msgid "An error occurred."

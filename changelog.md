@@ -1,4 +1,6 @@
-Murdext 2.0 compatibility and language packages update.
+	# Release Notes
+## 2.1.1
+• Added label recognition feature for WhatsApp Desktop. If you get the warning Could not click on the Copy menu, open NVDA Settings ? Koruz.biz MurText category, and save the Copy label as it appears in your WhatsApp context menu.
 
-
-
+## 2.0.2
+• Updated language packages.

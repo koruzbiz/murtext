@@ -7,8 +7,8 @@ msgstr ""
 msgid "Koruz.biz MurText"
 msgstr "Körüz.biz MurText"
 
-msgid "An NVDA plug-in for the MurText application, which transcribes audio/video files and WhatsApp voice messages in 100 languages."
-msgstr "Додаток NVDA, який перетворює аудіо- та відеофайли на вашому комп’ютері, а також голосові повідомлення WhatsApp у текст понад 100 мовами."
+msgid "An NVDA add-on for the MurText application that converts audio/video files and WhatsApp voice messages into text in over 100 languages. Free and unlimited speech-to-text conversion! With a single shortcut, instantly convert audio/video files and WhatsApp voice messages into text. Use the same shortcut to quickly save other files from the WhatsApp desktop app."
+msgstr "Додаток NVDA для програми MurText, який перетворює аудіо/відео файли та голосові повідомлення WhatsApp у текст понад 100 мовами. Безкоштовне та необмежене перетворення мовлення в текст! За допомогою одного ярлика миттєво перетворюйте аудіо/відео файли та голосові повідомлення WhatsApp у текст. Використовуйте той самий ярлик, щоб швидко зберігати інші файли з настільного додатка WhatsApp."
 
-msgid "Free and unlimited transcription! With a single shortcut, transcribe audio/video files and WhatsApp voice messages instantly. Use the same shortcut to quickly save other files from the WhatsApp desktop app."
-msgstr "Безкоштовна та необмежена транскрипція! Одним поєднанням клавіш миттєво транскрибуйте аудіо- й відеофайли та голосові повідомлення WhatsApp. Використовуйте ту саму комбінацію, щоб швидко зберігати інші файли з настільного додатка WhatsApp."
+msgid "Added label recognition feature for WhatsApp Desktop. If you get the warning Could not click on the Copy menu, open NVDA Settings → Koruz.biz MurText category, and save the Copy label as it appears in your WhatsApp context menu."
+msgstr "Додано функцію розпізнавання міток для WhatsApp Desktop. Якщо ви отримуєте попередження Не вдалося натиснути меню Копіювати, відкрийте Налаштування NVDA → категорію Koruz.biz MurText і збережіть мітку Копіювати так, як вона відображається у контекстному меню WhatsApp."

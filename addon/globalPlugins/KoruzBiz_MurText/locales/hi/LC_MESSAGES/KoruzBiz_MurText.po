@@ -54,8 +54,8 @@ msgstr "फ़ाइल MurText के साथ सहेजी गई।"
 msgid "The file could not be saved."
 msgstr "फ़ाइल सहेजी नहीं जा सकी।"
 
-msgid "Could not click the Copy option."
-msgstr "कॉपी विकल्प पर क्लिक नहीं किया जा सका।"
+msgid "Could not click the Copy option. Please open the Settings dialog and save the Copy label you see in WhatsApp’s context menu."
+msgstr "कॉपी विकल्प पर क्लिक नहीं किया जा सका। कृपया सेटिंग्स डायलॉग खोलें और WhatsApp के संदर्भ मेनू में दिखाई देने वाला कॉपी लेबल सहेजें।"
 
 msgid "Failed to open the menu."
 msgstr "मेनू खोलने में विफल।"
@@ -66,8 +66,11 @@ msgstr "WhatsApp सक्रिय नहीं है।"
 msgid "Context menu not found."
 msgstr "संदर्भ मेनू नहीं मिला।"
 
-msgid "The file has not been downloaded yet or the Copy option is unavailable."
-msgstr "फ़ाइल अभी तक डाउनलोड नहीं हुई है या कॉपी विकल्प उपलब्ध नहीं है।"
+msgid "The file has not been downloaded yet or the Copy option is unavailable. Please open the Settings dialog and save the Copy label you see in WhatsApp’s context menu."
+msgstr "फ़ाइल अभी तक डाउनलोड नहीं हुई है या कॉपी विकल्प उपलब्ध नहीं है। कृपया सेटिंग्स डायलॉग खोलें और WhatsApp के संदर्भ मेनू में दिखाई देने वाला कॉपी लेबल सहेजें।"
+
+msgid "Define the Copy label in WhatsApp Desktop."
+msgstr "WhatsApp डेस्कटॉप में कॉपी लेबल परिभाषित करें।"
 
 # Hata mesajları 
 msgid "An error occurred."

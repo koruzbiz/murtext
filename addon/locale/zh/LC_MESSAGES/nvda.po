@@ -7,8 +7,8 @@ msgstr ""
 msgid "Koruz.biz MurText"
 msgstr "Koruz.biz MurText"
 
-msgid "An NVDA plug-in for the MurText application, which transcribes audio/video files and WhatsApp voice messages in 100 languages."
-msgstr "MurText 应用程序的 NVDA 插件，可在 100 种语言中转录音频/视频文件和 WhatsApp 语音消息。"
+msgid "An NVDA add-on for the MurText application that converts audio/video files and WhatsApp voice messages into text in over 100 languages. Free and unlimited speech-to-text conversion! With a single shortcut, instantly convert audio/video files and WhatsApp voice messages into text. Use the same shortcut to quickly save other files from the WhatsApp desktop app."
+msgstr "适用于 MurText 应用的 NVDA 插件，可将音频/视频文件和 WhatsApp 语音消息转换为超过100种语言的文本。免费且无限制的语音转文本！通过一个快捷键即可即时将音频/视频文件和 WhatsApp 语音消息转换为文本。使用相同快捷键快速保存 WhatsApp 桌面应用中的其他文件。"
 
-msgid "Free and unlimited transcription! With a single shortcut, transcribe audio/video files and WhatsApp voice messages instantly. Use the same shortcut to quickly save other files from the WhatsApp desktop app."
-msgstr "免费且无限制的转录！只需一个快捷键，即可立即转录音频/视频文件和 WhatsApp 语音消息。使用同一快捷键，还可以快速保存 WhatsApp 桌面应用中的其他文件。"
+msgid "Added label recognition feature for WhatsApp Desktop. If you get the warning Could not click on the Copy menu, open NVDA Settings → Koruz.biz MurText category, and save the Copy label as it appears in your WhatsApp context menu."
+msgstr "为 WhatsApp Desktop 添加了标签识别功能。如果出现“无法点击复制菜单”警告，请打开 NVDA 设置 → Koruz.biz MurText 类别，并按 WhatsApp 上的显示保存复制标签。"

@@ -7,8 +7,8 @@ msgstr ""
 msgid "Koruz.biz MurText"
 msgstr "Körüz.biz MurText"
 
-msgid "An NVDA plug-in for the MurText application, which transcribes audio/video files and WhatsApp voice messages in 100 languages."
-msgstr "Um plug-in NVDA para o aplicativo MurText que transcreve arquivos de áudio/vídeo e mensagens de voz do WhatsApp em 100 idiomas."
+msgid "An NVDA add-on for the MurText application that converts audio/video files and WhatsApp voice messages into text in over 100 languages. Free and unlimited speech-to-text conversion! With a single shortcut, instantly convert audio/video files and WhatsApp voice messages into text. Use the same shortcut to quickly save other files from the WhatsApp desktop app."
+msgstr "Um complemento NVDA para o aplicativo MurText que converte seus arquivos de áudio e vídeo, bem como mensagens de voz do WhatsApp, em texto em mais de 100 idiomas. Conversão de fala para texto gratuita e ilimitada! Com um único atalho, converta instantaneamente arquivos de áudio e vídeo e mensagens de voz do WhatsApp em texto. Use o mesmo atalho para salvar rapidamente outros arquivos do aplicativo WhatsApp para desktop."
 
-msgid "Free and unlimited transcription! With a single shortcut, transcribe audio/video files and WhatsApp voice messages instantly. Use the same shortcut to quickly save other files from the WhatsApp desktop app."
-msgstr "Transcrição gratuita e ilimitada! Com um único atalho, transcreva arquivos de áudio/vídeo e mensagens de voz do WhatsApp instantaneamente. Use o mesmo atalho para salvar rapidamente outros arquivos do aplicativo WhatsApp para desktop."
+msgid "Added label recognition feature for WhatsApp Desktop. If you get the warning Could not click on the Copy menu, open NVDA Settings → Koruz.biz MurText category, and save the Copy label as it appears in your WhatsApp context menu."
+msgstr "Adicionado o recurso de reconhecimento de rótulos para o WhatsApp Desktop. Se você receber o aviso Não foi possível clicar no menu Copiar, abra Configurações do NVDA → categoria Koruz.biz MurText e salve o rótulo Copiar como aparece no menu de contexto do WhatsApp."

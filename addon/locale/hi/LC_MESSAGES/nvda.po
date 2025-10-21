@@ -7,8 +7,8 @@ msgstr ""
 msgid "Koruz.biz MurText"
 msgstr "Koruz.biz MurText"
 
-msgid "An NVDA plug-in for the MurText application, which transcribes audio/video files and WhatsApp voice messages in 100 languages."
-msgstr "MurText अनुप्रयोग के लिए एक NVDA प्लग-इन, जो 100 भाषाओं में ऑडियो/वीडियो फ़ाइलों और WhatsApp वॉइस संदेशों को ट्रांसक्राइब करता है।"
+msgid "An NVDA add-on for the MurText application that converts audio/video files and WhatsApp voice messages into text in over 100 languages. Free and unlimited speech-to-text conversion! With a single shortcut, instantly convert audio/video files and WhatsApp voice messages into text. Use the same shortcut to quickly save other files from the WhatsApp desktop app."
+msgstr "MurText एप्लिकेशन के लिए एक NVDA ऐड-ऑन जो ऑडियो/वीडियो फाइलों और WhatsApp वॉयस संदेशों को 100 से अधिक भाषाओं में टेक्स्ट में परिवर्तित करता है। मुफ्त और असीमित स्पीच-टू-टेक्स्ट रूपांतरण! केवल एक शॉर्टकट के साथ, ऑडियो/वीडियो फाइलों और WhatsApp वॉयस संदेशों को तुरंत टेक्स्ट में बदलें। WhatsApp डेस्कटॉप ऐप से अन्य फाइलों को तेजी से सहेजने के लिए उसी शॉर्टकट का उपयोग करें।"
 
-msgid "Free and unlimited transcription! With a single shortcut, transcribe audio/video files and WhatsApp voice messages instantly. Use the same shortcut to quickly save other files from the WhatsApp desktop app."
-msgstr "मुफ़्त और असीमित ट्रांसक्रिप्शन! केवल एक शॉर्टकट से ऑडियो/वीडियो फ़ाइलों और WhatsApp वॉइस संदेशों को तुरंत ट्रांसक्राइब करें। उसी शॉर्टकट का उपयोग करके WhatsApp डेस्कटॉप ऐप से अन्य फ़ाइलें भी जल्दी सहेजें।"
+msgid "Added label recognition feature for WhatsApp Desktop. If you get the warning Could not click on the Copy menu, open NVDA Settings → Koruz.biz MurText category, and save the Copy label as it appears in your WhatsApp context menu."
+msgstr "WhatsApp Desktop के लिए लेबल पहचान सुविधा जोड़ी गई है। यदि आपको चेतावनी मिलती है कि कॉपी मेनू पर क्लिक नहीं किया जा सका, तो NVDA सेटिंग्स → Koruz.biz MurText श्रेणी खोलें और अपने WhatsApp संदर्भ मेनू में दिखाई देने वाले अनुसार कॉपी लेबल सहेजें।"

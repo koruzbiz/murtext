@@ -48,8 +48,8 @@ msgstr "تم حفظ الملف باستخدام MurText."
 msgid "The file could not be saved."
 msgstr "تعذر حفظ الملف."
 
-msgid "Could not click the Copy option."
-msgstr "تعذر النقر على خيار النسخ."
+msgid "Could not click the Copy option. Please open the Settings dialog and save the Copy label you see in WhatsApp’s context menu."
+msgstr "تعذر النقر على خيار النسخ. يرجى فتح مربع الإعدادات وحفظ تسمية النسخ التي تراها في قائمة السياق في واتساب."
 
 msgid "Failed to open the menu."
 msgstr "فشل في فتح القائمة."
@@ -60,8 +60,11 @@ msgstr "واتساب ليس في وضع التركيز."
 msgid "Context menu not found."
 msgstr "لم يتم العثور على القائمة السياقية."
 
-msgid "The file has not been downloaded yet or the Copy option is unavailable."
-msgstr "لم يتم تنزيل الملف بعد أو خيار النسخ غير متاح."
+msgid "The file has not been downloaded yet or the Copy option is unavailable. Please open the Settings dialog and save the Copy label you see in WhatsApp’s context menu."
+msgstr "لم يتم تنزيل الملف بعد أو أن خيار النسخ غير متاح. يرجى فتح مربع الإعدادات وحفظ تسمية النسخ التي تراها في قائمة السياق في واتساب."
+
+msgid "Define the Copy label in WhatsApp Desktop."
+msgstr "عرّف تسمية النسخ في تطبيق واتساب للحاسوب."
 
 # رسائل الخطأ
 msgid "An error occurred."

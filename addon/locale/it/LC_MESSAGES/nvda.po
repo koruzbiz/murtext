@@ -7,8 +7,8 @@ msgstr ""
 msgid "Koruz.biz MurText"
 msgstr "Körüz.biz MurText"
 
-msgid "An NVDA plug-in for the MurText application, which transcribes audio/video files and WhatsApp voice messages in 100 languages."
-msgstr "Un plug-in NVDA per l'applicazione MurText che trascrive file audio/video e messaggi vocali WhatsApp in 100 lingue."
+msgid "An NVDA add-on for the MurText application that converts audio/video files and WhatsApp voice messages into text in over 100 languages. Free and unlimited speech-to-text conversion! With a single shortcut, instantly convert audio/video files and WhatsApp voice messages into text. Use the same shortcut to quickly save other files from the WhatsApp desktop app."
+msgstr "Un componente aggiuntivo NVDA per l'applicazione MurText che converte file audio/video e messaggi vocali WhatsApp in testo in oltre 100 lingue. Conversione vocale in testo gratuita e illimitata! Con una sola scorciatoia, converti immediatamente file audio/video e messaggi vocali WhatsApp in testo. Usa la stessa scorciatoia per salvare rapidamente altri file dall'app desktop di WhatsApp."
 
-msgid "Free and unlimited transcription! With a single shortcut, transcribe audio/video files and WhatsApp voice messages instantly. Use the same shortcut to quickly save other files from the WhatsApp desktop app."
-msgstr "Trascrizione gratuita e illimitata! Con un solo tasto di scelta rapida, trascrivi istantaneamente file audio/video e messaggi vocali WhatsApp. Usa lo stesso tasto per salvare rapidamente altri file dall'app desktop di WhatsApp."
+msgid "Added label recognition feature for WhatsApp Desktop. If you get the warning Could not click on the Copy menu, open NVDA Settings → Koruz.biz MurText category, and save the Copy label as it appears in your WhatsApp context menu."
+msgstr "Aggiunta la funzione di riconoscimento delle etichette per WhatsApp Desktop. Se ricevi l’avviso Impossibile fare clic sul menu Copia, apri Impostazioni NVDA → categoria Koruz.biz MurText e salva l’etichetta Copia come appare nel menu contestuale di WhatsApp."

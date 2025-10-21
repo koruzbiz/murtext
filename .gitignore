@@ -33,6 +33,7 @@ pycache__/
 
 # Ceviri dosyaları (yerelde kalacak)
 no_push/
+artifacts/
 
 # Yerel araçlar / scriptler: bat ve txt dosyaları repoya gitmesin
 *.bat

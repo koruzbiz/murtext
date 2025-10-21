@@ -7,8 +7,8 @@ msgstr ""
 msgid "Koruz.biz MurText"
 msgstr "Körüz.biz MurText"
 
-msgid "An NVDA plug-in for the MurText application, which transcribes audio/video files and WhatsApp voice messages in 100 languages."
-msgstr "Un plugin NVDA pour l'application MurText, qui transcrit des fichiers audio/vidéo et des messages vocaux WhatsApp dans 100 langues."
+msgid "An NVDA add-on for the MurText application that converts audio/video files and WhatsApp voice messages into text in over 100 languages. Free and unlimited speech-to-text conversion! With a single shortcut, instantly convert audio/video files and WhatsApp voice messages into text. Use the same shortcut to quickly save other files from the WhatsApp desktop app."
+msgstr "Une extension NVDA pour l’application MurText qui convertit les fichiers audio/vidéo et les messages vocaux WhatsApp en texte dans plus de 100 langues. Conversion vocale en texte gratuite et illimitée ! Avec un seul raccourci, convertissez instantanément des fichiers audio/vidéo et des messages vocaux WhatsApp en texte. Utilisez le même raccourci pour enregistrer rapidement d’autres fichiers depuis l’application de bureau WhatsApp."
 
-msgid "Free and unlimited transcription! With a single shortcut, transcribe audio/video files and WhatsApp voice messages instantly. Use the same shortcut to quickly save other files from the WhatsApp desktop app."
-msgstr "Transcription gratuite et illimitée ! Avec un seul raccourci, transcrivez instantanément des fichiers audio/vidéo et des messages vocaux WhatsApp. Utilisez le même raccourci pour enregistrer rapidement d'autres fichiers depuis l'application WhatsApp pour bureau."
+msgid "Added label recognition feature for WhatsApp Desktop. If you get the warning Could not click on the Copy menu, open NVDA Settings → Koruz.biz MurText category, and save the Copy label as it appears in your WhatsApp context menu."
+msgstr "Ajout de la fonction de reconnaissance des étiquettes pour WhatsApp Desktop. Si vous recevez l’avertissement Impossible de cliquer sur le menu Copier, ouvrez Paramètres NVDA → catégorie Koruz.biz MurText et enregistrez l’étiquette Copier telle qu’elle apparaît dans votre menu contextuel WhatsApp."

@@ -798,7 +798,8 @@ class GlobalPlugin(_BaseGlobalPlugin):
                 if ROLE_MENUITEM and getattr(child, "role", None) != ROLE_MENUITEM:
                     continue
                 name = _MurText_safe(getattr(child, "name", "")).lower()
-                if name and tr("copy") in name :
+                copy_val = conf["KoruzBiz_MurText"].get("copy_key_val", "copy")
+                if name and copy_val.lower() in name.lower():
                     try:
                         child.doAction()
                         try:
@@ -808,14 +809,14 @@ class GlobalPlugin(_BaseGlobalPlugin):
                         return
                     except Exception as e:
                         MurText_log_debug(f"[Kopyala] doAction hata: {e}", g=1, t=0)
-                        #! "Kopyala seçeneğine tıklanamadı."
-                        ui.message(tr("Could not click the Copy option."))
+                        #! Kopyala seçeneğine tıklanamadı. Lütfen ayarlar iletişim kutusundan kopyala etiketini tanımlayın.
+                        ui.message(tr("Could not click the Copy option. Please open the Settings dialog and save the Copy label you see in WhatsApp’s context menu."))
                         return
     
-            #! "Dosya henüz bilgisayara indirilmemiş veya kopyala seçeneği yok."
-            ui.message(tr("The file has not been downloaded yet or the Copy option is unavailable."))
+            #! "Dosya henüz bilgisayara indirilmemiş veya kopyala seçeneği yok. Lütfen ayarlar iletişim kutusundan kopyala etiketini tanımlayın.
+            ui.message(tr("The file has not been downloaded yet or the Copy option is unavailable. Please open the Settings dialog and save the Copy label you see in WhatsApp’s context menu."))
         except Exception as e:
             MurText_log_debug(f"[Kopyala] Genel hata: {e}", g=1, t=0)
-            #! "Kopyala seçeneğine tıklanamadı."
-            ui.message(tr("Could not click the Copy option."))
+            #! "Kopyala seçeneğine tıklanamadı. Lütfen ayarlar iletişim kutusundan kopyala etiketini tanımlayın."
+            ui.message(tr("Could not click the Copy option. Please open the Settings dialog and save the Copy label you see in WhatsApp’s context menu."))
     

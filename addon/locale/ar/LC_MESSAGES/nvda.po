@@ -7,8 +7,8 @@ msgstr ""
 msgid "Koruz.biz MurText"
 msgstr "Körüz.biz MurText"
 
-msgid "An NVDA plug-in for the MurText application, which transcribes audio/video files and WhatsApp voice messages in 100 languages."
-msgstr "إضافة NVDA لتطبيق MurText، تقوم بنسخ ملفات الصوت/الفيديو ورسائل الصوت في واتساب إلى نص بـ 100 لغة."
+msgid "An NVDA add-on for the MurText application that converts audio/video files and WhatsApp voice messages into text in over 100 languages. Free and unlimited speech-to-text conversion! With a single shortcut, instantly convert audio/video files and WhatsApp voice messages into text. Use the same shortcut to quickly save other files from the WhatsApp desktop app."
+msgstr "إضافة NVDA لتطبيق MurText تقوم بتحويل ملفات الصوت والفيديو ورسائل WhatsApp الصوتية إلى نص بأكثر من 100 لغة. تحويل مجاني وغير محدود من الكلام إلى نص! من خلال اختصار واحد فقط، يمكنك تحويل ملفات الصوت والفيديو ورسائل WhatsApp الصوتية إلى نص على الفور. استخدم نفس الاختصار لحفظ الملفات الأخرى بسرعة من تطبيق WhatsApp لسطح المكتب."
 
-msgid "Free and unlimited transcription! With a single shortcut, transcribe audio/video files and WhatsApp voice messages instantly. Use the same shortcut to quickly save other files from the WhatsApp desktop app."
-msgstr "نسخ مجاني وغير محدود! باستخدام اختصار واحد، قم بنسخ ملفات الصوت/الفيديو ورسائل الصوت في واتساب على الفور. استخدم نفس الاختصار لحفظ الملفات الأخرى من تطبيق واتساب لسطح المكتب بسرعة."
+msgid "Added label recognition feature for WhatsApp Desktop. If you get the warning Could not click on the Copy menu, open NVDA Settings → Koruz.biz MurText category, and save the Copy label as it appears in your WhatsApp context menu."
+msgstr "تمت إضافة ميزة التعرف على التسميات لتطبيق WhatsApp Desktop. إذا تلقيت التحذير تعذر النقر على قائمة النسخ، افتح إعدادات NVDA → فئة Koruz.biz MurText واحفظ تسمية النسخ كما تظهر في قائمة السياق الخاصة بـ WhatsApp."
