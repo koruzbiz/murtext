@@ -21,31 +21,18 @@ try:
 except Exception:
     def tr(msg): return msg
 
-# Basit log (gereksiz detay yok)
-def MurText_log_debug(message: str, g: int = 0, t: int = 1):
-    """
-    1 class
-    2 masaüstü
-    3 gezgin
-    4 WhatsApp
-    5 genel
-    6 settings
-    """
-    g_ = 0 # 0: Tüm gruplar 1+ ilgili grup
-    t_ = 0 # 0: Hata ve bilgi 1: Sadece bilgi
+# Log kaydı yapmak isterseniz 'logger_pz' değerini 'True' yapın. / If you want to log, set the 'logger_pz' value to 'True'.
+logger_pz = False
 
-    try:
-        # Filtreleme mantığı
-        if g_ == 0 or g == g_:
-            if t_ == 0 or (t_ == 1 and t == 1):
-                xerr = "Hata: " if t == 0 else ""
-                # Yerel loglamayı açmak için aşağıdaki 3 "#" işaretini kaldırın.
-                # Remove the following 3 "#" sign to open local loging.
-#                log_path = os.path.join(os.path.dirname(__file__), "debug.txt")
-#                with open(log_path, "a", encoding="utf-8") as f:
-#                    f.write(f"{xerr}{message} [g={g} t={t}] \n")
-    except Exception as e:
-        pass
+from ._log import baslat_loglama
+LOG_DIZINI = os.path.dirname(os.path.abspath(__file__))
+logger = baslat_loglama(
+    appdata_dir=LOG_DIZINI,
+    eklenti_adi="MurText",
+    stdout_yonlendir=False,
+    aktif=logger_pz,
+    excepthook_kur=logger_pz
+)
 
 
 # ayarlar / keys
@@ -137,7 +124,7 @@ def _find_copy():
 
     # Eğer zaten varsa çık
     if conf[SECTION].get(KEY_COPY_KEY):
-        MurText_log_debug("Zaten copy anahtarı mevcut; atlandı.", g=6, t=1)
+        logger.info("Zaten copy anahtarı mevcut; atlandı.")
         return conf[SECTION][KEY_COPY_KEY]
 
     # 1) OS dilini al
@@ -169,7 +156,7 @@ def _find_copy():
             conf[SECTION][KEY_COPY_KEY] = val
             conf[SECTION][KEY_COPY_SOURCE] = 'manual_map'
             conf.save()
-            MurText_log_debug(f"manual_map ile bulundu: {key} => {val}", g=6, t=1)
+            logger.info(f"manual_map ile bulundu: {key} => {val}")
             return val
 
     # Diğer diller için kısa kodu kontrol et 
@@ -179,7 +166,7 @@ def _find_copy():
             conf[SECTION][KEY_COPY_KEY] = val
             conf[SECTION][KEY_COPY_SOURCE] = 'manual_map'
             conf.save()
-            MurText_log_debug(f"manual_map ile bulundu: {lang_short} => {val}", g=6, t=1)
+            logger.info(f"manual_map ile bulundu: {lang_short} => {val}")
             return val
 
     # 3) Mini sözlükte yoksa fallback: gettext ile 'Copy' çevirisini al 
@@ -192,7 +179,7 @@ def _find_copy():
     conf[SECTION][KEY_COPY_KEY] = msg
     conf[SECTION][KEY_COPY_SOURCE] = 'gettext_fallback'
     conf.save()
-    MurText_log_debug(f"gettext fallback kaydedildi => {msg}", g=6, t=1)
+    logger.info(f"gettext fallback kaydedildi => {msg}")
     return msg
 
 class MurTextSettingsPanel(SettingsPanel):
@@ -306,7 +293,7 @@ try:
         conf[SECTION] = {}
     if not conf[SECTION].get(KEY_COPY_KEY):
         _res = _find_copy()
-        MurText_log_debug(f"Otomatik tespit sonucu: {_res}", g=6, t=1)
+        logger.info(f"Otomatik tespit sonucu: {_res}")
 except Exception:
     # Sessiz kal
     pass
