@@ -22,7 +22,7 @@ addon_info = AddonInfo(
 	#! "Bilgisayardaki ses/video dosyalarını ve WhatsApp ses dosyalarını 100 dilde yazıya dönüştüren MurText eklentisi."
 	addon_description=_("""An NVDA add-on for the MurText application that converts audio/video files and WhatsApp voice messages into text in over 100 languages. Free and unlimited speech-to-text conversion! With a single shortcut, instantly convert audio/video files and WhatsApp voice messages into text. Use the same shortcut to quickly save other files from the WhatsApp desktop app."""),
 	# sürüm
-	addon_version="2.2.1",
+	addon_version="2.2.2",
 	# Bu sürüm için kısa değişiklik günlüğü
 	# Çevirmenler: Eklenti mağazasında gösterilecek bu eklenti sürümü için "yenilikler" içeriği
 	#! "Tek kısayolla bilgisayarınızdaki ve WhatsApp Masaüstü'ndeki ses/video dosyaları sınırsız sürede transkribe edin. WhatsApp'taki .doc, .zip vb. dosyaları aynı kısayolla kaydedin."

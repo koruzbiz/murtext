@@ -515,17 +515,6 @@ def Unputable_File(source, file_path, ext):
     Desteklenmeyen dosya senaryosunu ele alır.
     - WhatsApp'tan geldiyse: save_path içine kopyalar ve kullanıcıya bildirir.
     - Explorer/Desktop ise: sadece kullanıcıya desteklenmediğini söyler.
-    Genişletmeye uygun, yapılandırılmış bir sonuç döndürür.
-
-    Returns:
-        dict: {
-          "handled": bool,         # Akış başarıyla işlendi mi
-          "saved": bool|None,      # WhatsApp senaryosunda kopyalama yapıldıysa True/False, diğerlerinde None
-          "dest": str|None,        # Kopyalanan hedef yol (varsa)
-          "source": str,
-          "file_path": str,
-          "ext": str
-        }
     """
     result = {
         "handled": False,
@@ -536,6 +525,28 @@ def Unputable_File(source, file_path, ext):
         "ext": ext,
     }
 
+    # Mesajı hoparlöre düşürmek için: gecikmeli + konuşmayı kes + ui.message
+    def _murtext_mesaj_oku(metin: str, gecikme_ms: int = 450):
+        def _calistir():
+            try:
+                # WhatsApp/NVDA akışını bastıran konuşmayı kes
+                try:
+                    speech.cancelSpeech()
+                except Exception:
+                    pass
+
+                # Mesajı okut
+                ui.message(metin)
+            except Exception:
+                # Mesaj yüzünden akış asla patlamasın
+                pass
+
+        try:
+            wx.CallLater(int(gecikme_ms), _calistir)
+        except Exception:
+            # wx yoksa (normalde var) yine de en azından mesajı basmayı dene
+            _calistir()
+
     try:
         if source == "WhatsApp":
             try:
@@ -544,20 +555,26 @@ def Unputable_File(source, file_path, ext):
                 shutil.copy2(file_path, dest_file)
 
                 #! "Dosya MurText ile kaydedildi."
-                ui.message(tr("The file was saved with MurText."))
-                logger.info(f"Unputable_File: WhatsApp kaydı başarılı | src={file_path} -> dest={dest_file} | ext={ext}")
+                _murtext_mesaj_oku(tr("The file was saved with MurText."), gecikme_ms=450)
+
+                logger.info(
+                    f"Unputable_File: WhatsApp kaydı başarılı | src={file_path} -> dest={dest_file} | ext={ext}"
+                )
                 result.update({"handled": True, "saved": True, "dest": dest_file})
+
             except Exception as copy_err:
                 #! "Dosya kaydedilemedi."
                 ui.message(tr("The file could not be saved."))
                 logger.error(f"Unputable_File: WhatsApp kaydı HATASI | src={file_path} | hata={copy_err}")
                 result.update({"handled": True, "saved": False})
+
         else:
             # Explorer/Desktop vb.
             #! "Seçilen öğe MurText tarafından desteklenmiyor."
             ui.message(tr("The selected item is not supported by MurText."))
             logger.info(f"Unputable_File: Desteklenmeyen uzantı | ext={ext} | path={file_path} | source={source}")
             result.update({"handled": True})
+
     except Exception as e:
         logger.error(f"Unputable_File: İstisna: {e}")
 
@@ -769,7 +786,7 @@ class GlobalPlugin(_BaseGlobalPlugin):
             logger.info("[Kopyala] Sağ menü tuşu gönderildi. Kısa deneme döngüsü başlıyor...")
     
             # Yavaş cihazlar için 4 kısa deneme: toplam ~1.5 sn içinde biter
-            gecikmeler = [150, 250, 400, 700]
+            gecikmeler = [1000, 250, 400, 700]
             durum = {"i": 0}
     
             def _deneme():
