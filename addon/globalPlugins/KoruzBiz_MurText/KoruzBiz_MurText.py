@@ -1,6 +1,6 @@
 ﻿# -*- coding: utf-8 -*-
-# Plug-in version: 2.1
-# Murdext compatible version: 2.1.2
+# Plug-in version: 2.2.2
+# Murdext compatible version: 2.2.2
 
 # Standart modüller / Standard Modules
 import datetime
