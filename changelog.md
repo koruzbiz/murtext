@@ -1,5 +1,11 @@
 # Release Notes
 
+## 2.2.4
+Compatibility adjustments have been made with WhatsApp Desktop add-ons
+
+## 2.2.3
+Focus / scanning mode adjustment has been made for WhatsApp Web Desktop.
+
 ## 2.2.2 
 
 Fixed UI message swallowed by WhatsApp.

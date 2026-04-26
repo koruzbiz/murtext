@@ -122,7 +122,7 @@ def _MurText_get_real_desktop():
             val, _ = reg.QueryValueEx(key, "Desktop")
             path = os.path.expandvars(val)
             if os.path.isdir(path):
-                #- logger.info(f"[Desktop] Reg Desktop: {path}")
+                #-! logger.info(f"[Desktop] Reg Desktop: {path}")
                 return path
     except Exception as e:
         logger.error(f"[Desktop] _MurText_get_real_desktop Reg okunamadı: {e}")
@@ -442,7 +442,7 @@ def MurText_which_app():
         window_class = str(getattr(obj, "windowClassName", "")).lower()
         role = str(getattr(obj, "role", "")).lower()
         name = str(getattr(obj, "name", "")).lower()
-        #- logger.info(f"[Ctx] app={app_name}, class={window_class}, role={role}, name={name}")
+        #-! logger.info(f"[Ctx] app={app_name}, class={window_class}, role={role}, name={name}")
 
         if MurText_is_WhatsApp_context():
             logger.info("[Ctx] Tespit: WhatsApp")
@@ -723,7 +723,7 @@ class GlobalPlugin(_BaseGlobalPlugin):
 
         # Sadece tutucu false ise 
         if not MurText_INSTALLED:
-            #- logger.info("Varlık kontrol ediliyor...")
+            #-! logger.info("Varlık kontrol ediliyor...")
             if not MurText_probe_installation_on_load():
                 # Kurulu değil -> pencere açıldı, işi kesiyoruz
                 return
@@ -732,37 +732,22 @@ class GlobalPlugin(_BaseGlobalPlugin):
             logger.info(f"[Master] Bağlam: {ctx}")
 
             if ctx == APP_WhatsApp:
-                #- logger.info("[Master] WhatsApp algılandı, menü açılacak ve tetikleme yapılacak")
                 try:
-                    # Bağlam menüsü: Shift+F10'u 'kb' jesti olarak gönder
-                    try:
-                        KIG.fromName("shift+f10").send()
-                    except Exception as e:
-                        logger.error(f"[Master] Shift+F10 gönderilemedi: {e}")
-                        try:
-                            KIG.fromName("applications").send()
-                            logger.info("[Master] Uygulama tusu (applications) gonderildi")
-                        except Exception as e2:
-                            logger.error(f"[Master] Uygulama tusu da gonderilemedi: {e2}")
-
-                    # Menü render olsun; sonra 'Kopyala' taraması
-                    wx.CallLater(1000, self._MurText_try_invoke_copy)
+                    logger.info("[Master] WhatsApp algılandı, klasik menü açma akışı başlatılıyor")
+                    self._MurText_open_context_menu()
                     return
-
-                    #- logger.info("[Master] Menü açıldı ve Insert+Shift+K gönderildi")
                 except Exception as e:
-                    logger.error(f"[Master] Tuş gönderimi hatası: {e}")
-                    #! "Menü açma işlemi başarısız."
+                    logger.error(f"[Master] WhatsApp menü açma hatası: {e}")
                     ui.message(tr("Failed to open the menu."))
                 return
 
             if ctx == APP_DESKTOP:
-                #- logger.info("[Master] Masaüstü algılandı, MurText_open çağrılıyor")
+                #-! logger.info("[Master] Masaüstü algılandı, MurText_open çağrılıyor")
                 MurText_open(source=APP_DESKTOP)
                 return
 
             if ctx == APP_EXPLORER:
-                #- logger.info("[Master] Gezginde tetiklendi, MurText_open çağrılıyor")
+                #-! logger.info("[Master] Gezginde tetiklendi, MurText_open çağrılıyor")
                 MurText_open(source=APP_EXPLORER)
                 return
 
@@ -813,186 +798,331 @@ class GlobalPlugin(_BaseGlobalPlugin):
         except Exception as e:
             logger.error(f"[Kopyala] Menü açma/deneme döngüsü hata: {e}")
 
+    def _MurText_odak_mesaj_kabinda_mi(self, odak):
+        try:
+            ad = " ".join(str(getattr(odak, "name", "")).split()).strip().lower()
+        except Exception:
+            ad = ""
+
+        try:
+            rol = getattr(odak, "role", None)
+        except Exception:
+            rol = None
+
+        if not ad:
+            return False
+
+        if "daha fazla seçenek için sol veya sağ ok tuşuna basarak bağlam menüsüne erişin" in ad:
+            return True
+
+        try:
+            from controlTypes import Role
+            if rol in (Role.SECTION, Role.LISTITEM):
+                if "sesli mesaj" in ad or "video" in ad or "görüntü" in ad or "fotoğraf" in ad or "image" in ad or "message" in ad or "mesaj" in ad:
+                    return True
+        except Exception:
+            pass
+
+        return False
+
+    def _MurText_odak_hedef_kopyala_mi(self, odak, copy_anahtar):
+        try:
+            ad = " ".join(str(getattr(odak, "name", "")).split()).strip().lower()
+        except Exception:
+            ad = ""
+        return bool(copy_anahtar and ad == copy_anahtar)
+
+    def _MurText_find_buttons(self, obj):
+        dugmeler = []
+        try:
+            from controlTypes import Role
+            if getattr(obj, "role", None) == Role.BUTTON:
+                dugmeler.append(obj)
+        except Exception:
+            pass
+        try:
+            for cocuk in getattr(obj, "children", []) or []:
+                dugmeler.extend(self._MurText_find_buttons(cocuk))
+        except Exception:
+            pass
+        return dugmeler
+
+    def _MurText_context_menu_dogrudan_ac(self):
+        try:
+            odak = api.getFocusObject()
+            ebeveyn = getattr(odak, "parent", None)
+            if not ebeveyn:
+                logger.info("[Kopyala] Doğrudan menü açma: ebeveyn yok")
+                return False
+
+            kardesler = getattr(ebeveyn, "children", []) or []
+            logger.info(f"[Kopyala] Doğrudan menü açma: kardeş sayısı: {len(kardesler)}")
+
+            for kardes in kardesler:
+                dugmeler = self._MurText_find_buttons(kardes)
+                if not dugmeler:
+                    continue
+
+                for dugme in dugmeler:
+                    try:
+                        durumlar = getattr(dugme, "states", set())
+                        if 512 in durumlar:
+                            logger.info(f"[Kopyala] Doğrudan menü açma: collapsed düğme bulundu: {getattr(dugme, 'name', None)!r}")
+                            dugme.doAction()
+                            return True
+                    except Exception:
+                        pass
+
+                try:
+                    logger.info(f"[Kopyala] Doğrudan menü açma: son düğme fallback kullanılacak: {getattr(dugmeler[-1], 'name', None)!r}")
+                    dugmeler[-1].doAction()
+                    return True
+                except Exception:
+                    pass
+
+            logger.info("[Kopyala] Doğrudan menü açma: uygun düğme bulunamadı")
+            return False
+        except Exception as e:
+            logger.error(f"[Kopyala] Doğrudan menü açma hatası: {e}")
+            return False
+
+    def _MurText_appmodule_context_menu_cagir(self):
+        try:
+            odak = api.getFocusObject()
+            app_modul = getattr(odak, "appModule", None)
+            if not app_modul:
+                logger.info("[Kopyala] AppModule bulunamadı")
+                return False
+
+            komut = getattr(app_modul, "script_contextMenu", None)
+            if not komut:
+                logger.info("[Kopyala] AppModule script_contextMenu bulunamadı")
+                return False
+
+            logger.info("[Kopyala] AppModule script_contextMenu doğrudan çağrılıyor")
+            komut(None)
+            return True
+        except Exception as e:
+            logger.error(f"[Kopyala] AppModule script_contextMenu çağrı hatası: {e}")
+            return False
+
     def _MurText_open_context_menu(self):
-        """WhatsApp üzerinde doğru öğeye odak alıp bağlam menüsünü açar, sonra denemeli aramayı başlatır."""
+        """WhatsApp üzerinde bağlam menüsünü önce nesne tabanlı yollarla, en son ham tuşla açmayı dener."""
         try:
             import winUser
-    
+
             VK_APPS = 0x5D
-    
-            # 1) NVDA navigator nesnesini odağa çekmeyi dene
+
+            def _menuyu_tusla_ac():
+                try:
+                    winUser.keybd_event(VK_APPS, 0, 0, 0)
+                    winUser.keybd_event(VK_APPS, 0, winUser.KEYEVENTF_KEYUP, 0)
+                    logger.info("[Kopyala] Sağ menü tuşu gönderildi, denemeli arama başlatılıyor...")
+                    wx.CallLater(220, self._MurText_try_invoke_copy, True, 1)
+                except Exception as e:
+                    logger.error(f"[Kopyala] Sağ menü tuşu gönderilemedi: {e}")
+
+            def _menu_acildi_mi_ve_kopyala_aransın():
+                try:
+                    odak = api.getFocusObject()
+                    logger.info(f"[Kopyala] Menü açma sonrası odak: name={getattr(odak, 'name', None)!r}, role={getattr(odak, 'role', None)!r}")
+                except Exception as e:
+                    logger.error(f"[Kopyala] Menü açma sonrası odak okunamadı: {e}")
+                wx.CallLater(120, self._MurText_try_invoke_copy, True, 1)
+
             try:
-                nav = api.getNavigatorObject()
-                if nav and getattr(nav, "setFocus", None):
-                    nav.setFocus()
-                    logger.info("[Kopyala] Navigator nesnesine setFocus denendi.")
+                odak = api.getFocusObject()
+                logger.info(f"[Kopyala] Menü açma öncesi odak: name={getattr(odak, 'name', None)!r}, role={getattr(odak, 'role', None)!r}")
+
+                if self._MurText_odak_mesaj_kabinda_mi(odak):
+                    logger.info("[Kopyala] Odak mesaj kabında. Önce bir kez sağ ok gönderilecek.")
+                    try:
+                        KIG.fromName("rightArrow").send()
+                    except Exception as e:
+                        logger.error(f"[Kopyala] Sağ ok gönderilemedi: {e}")
             except Exception as e:
-                logger.info(f"[Kopyala] Navigator setFocus denenemedi: {e}")
-    
-            # 2) Bağlam menüsü tuşu
-            try:
-                winUser.keybd_event(VK_APPS, 0, 0, 0)
-                winUser.keybd_event(VK_APPS, 0, winUser.KEYEVENTF_KEYUP, 0)
-                logger.info("[Kopyala] Sağ menü tuşu gönderildi, denemeli arama başlatılıyor...")
-            except Exception as e:
-                logger.error(f"[Kopyala] Sağ menü tuşu gönderilemedi: {e}")
-                return
-    
-            # 3) Menü açılışını bekleyip 4 deneme yap
-            wx.CallLater(200, self._MurText_try_invoke_copy, True, 1)
-    
+                logger.error(f"[Kopyala] Odak çözümleme hatası: {e}")
+
+            def _ileri_asama():
+                if self._MurText_appmodule_context_menu_cagir():
+                    logger.info("[Kopyala] Menü AppModule üzerinden açılmaya çalışıldı")
+                    wx.CallLater(220, _menu_acildi_mi_ve_kopyala_aransın)
+                    return
+
+                if self._MurText_context_menu_dogrudan_ac():
+                    logger.info("[Kopyala] Menü doğrudan doAction ile açılmaya çalışıldı")
+                    wx.CallLater(220, _menu_acildi_mi_ve_kopyala_aransın)
+                    return
+
+                logger.info("[Kopyala] Nesne tabanlı yollar başarısız, ham sağ menü tuşuna düşülüyor")
+                _menuyu_tusla_ac()
+
+            wx.CallLater(180, _ileri_asama)
+
         except Exception as e:
             logger.error(f"[Kopyala] Sağ menü açma hata: {e}")
-    
-    
+
     def _MurText_try_invoke_copy(self, afterMenu: bool = False, deneme_no: int = 0):
         try:
             focus = api.getFocusObject()
             pid = getattr(focus, "processID", None)
-            hwnd = getattr(focus, "windowHandle", None)
-    
+
             def _n(s: str) -> str:
                 try:
                     return " ".join(str(s).split()).strip().lower()
                 except Exception:
                     return ""
-    
+
             def _obj_ozet(o):
                 try:
-                    return (
-                        f"name={getattr(o,'name',None)!r}, "
-                        f"role={getattr(o,'role',None)!r}, "
-                        f"class={getattr(o,'windowClassName',None)!r}, "
-                        f"hwnd={getattr(o,'windowHandle',None)!r}, "
-                        f"pid={getattr(o,'processID',None)!r}"
-                    )
+                    return f"name={getattr(o,'name',None)!r}, role={getattr(o,'role',None)!r}, class={getattr(o,'windowClassName',None)!r}, hwnd={getattr(o,'windowHandle',None)!r}, pid={getattr(o,'processID',None)!r}"
                 except Exception:
                     return "ozet_alinamadi"
-    
+
+            def _tikla_ve_devam_et(hedef):
+                try:
+                    logger.info(f"[Kopyala] Hedef çalıştırılıyor: {_obj_ozet(hedef)}")
+                    hedef.doAction()
+                except Exception as e:
+                    logger.error(f"[Kopyala] doAction hatası: {e}")
+                    try:
+                        KIG.fromName("enter").send()
+                        logger.info("[Kopyala] Enter ile ikinci deneme yapıldı")
+                    except Exception as e2:
+                        logger.error(f"[Kopyala] Enter gönderilemedi: {e2}")
+                        return False
+                wx.CallLater(300, MurText_WhatsApp)
+                return True
+
+            def _odak_kopyala_mi(odak, copy_anahtar):
+                return self._MurText_odak_hedef_kopyala_mi(odak, copy_anahtar)
+
+            def _odak_cevapla_mi(odak):
+                try:
+                    ad = _n(getattr(odak, "name", ""))
+                    return ad == "cevapla"
+                except Exception:
+                    return False
+
+            def _komsu_dugumlerde_ara(baslangic, copy_anahtar, pid):
+                try:
+                    ebeveyn = getattr(baslangic, "parent", None)
+                    if not ebeveyn:
+                        return None
+                    cocuklar = getattr(ebeveyn, "children", None) or []
+                    logger.info(f"[Kopyala] Kardeş taraması başladı. Çocuk sayısı: {len(cocuklar)}")
+                    for cocuk in cocuklar:
+                        try:
+                            if pid is not None and getattr(cocuk, "processID", None) != pid:
+                                continue
+                            ad = _n(getattr(cocuk, "name", ""))
+                            if copy_anahtar and ad == copy_anahtar:
+                                logger.info(f"[Kopyala] Kardeş düğümde hedef bulundu: {_obj_ozet(cocuk)}")
+                                return cocuk
+                        except Exception:
+                            pass
+                except Exception as e:
+                    logger.error(f"[Kopyala] Kardeş taraması hatası: {e}")
+                return None
+
+            def _menu_agacinda_ara(kok, copy_anahtar, pid):
+                ziyaret = 0
+                max_dugum = 250
+                stack = [kok]
+                seen = set()
+                while stack and ziyaret < max_dugum:
+                    node = stack.pop()
+                    if not node:
+                        continue
+                    node_id = id(node)
+                    if node_id in seen:
+                        continue
+                    seen.add(node_id)
+                    ziyaret += 1
+                    try:
+                        ad = _n(getattr(node, "name", ""))
+                        if copy_anahtar and ad == copy_anahtar:
+                            logger.info(f"[Kopyala] Menü ağacında hedef bulundu: {_obj_ozet(node)}")
+                            return node
+                    except Exception:
+                        pass
+                    try:
+                        cocuklar = getattr(node, "children", None) or []
+                        for cocuk in reversed(cocuklar):
+                            if pid is not None and getattr(cocuk, "processID", None) != pid:
+                                continue
+                            stack.append(cocuk)
+                    except Exception:
+                        pass
+                logger.info(f"[Kopyala] Menü ağacı tarandı. Gezilen düğüm sayısı: {ziyaret}")
+                return None
+
             if not _MurText_is_WhatsApp_obj(focus, target_pid=pid):
                 ui.message(tr("WhatsApp is not focused."))
                 logger.info("[Kopyala] Odak WhatsApp değil")
                 logger.info(f"[Kopyala] Odak: {_obj_ozet(focus)}")
                 return
-    
-            # Menü açma ilk çağrı
+
             if not afterMenu:
                 self._MurText_open_context_menu()
                 return
-    
-            # Denemeli arama başlığı ui mesajı tekralamadan
+
             max_deneme = 4
             logger.info(f"[Kopyala] Deneme: {deneme_no}/{max_deneme}")
-    
-            # Kopyala etiketi ayarlardan gelsin
+
             copy_val = conf["KoruzBiz_MurText"].get("copy_key_val", "Kopyala")
             copy_anahtar = _n(copy_val)
-    
+
             logger.info(f"[Kopyala] Odak: {_obj_ozet(focus)}")
             logger.info(f"[Kopyala] Aranan metin: {copy_val!r} (normalize={copy_anahtar!r})")
-    
-            # 0) Odak zaten hedef mi?
-            focus_name_n = _n(getattr(focus, "name", ""))
-            if copy_anahtar and focus_name_n and (copy_anahtar in focus_name_n):
-                logger.info("[Kopyala] Odak zaten hedef; doAction deneniyor")
-                focus.doAction()
-                wx.CallLater(300, MurText_WhatsApp)
+
+            if _odak_kopyala_mi(focus, copy_anahtar):
+                logger.info("[Kopyala] Odak zaten Kopyala üzerinde")
+                _tikla_ve_devam_et(focus)
                 return
-    
-            # 1) Menü kökünü daralt: DIALOG/LIST yakalarsan oradan tara
-            root = focus
-            prev = None
-            zincir_limit = 30
-    
-            try:
-                from controlTypes import Role
-                hedef_menu_root_role = {Role.DIALOG, Role.LIST}
-            except Exception:
-                hedef_menu_root_role = set()
-    
-            menu_root = None
-            for _ in range(zincir_limit):
-                if not root or root == prev:
-                    break
-                prev = root
-    
-                # Menü konteynerine denk geldiysek dur
+
+            if _odak_cevapla_mi(focus):
+                logger.info("[Kopyala] Odak Cevapla üzerinde. Bir alt öğeye geçiş deneniyor.")
                 try:
-                    r = getattr(root, "role", None)
-                    if hedef_menu_root_role and r in hedef_menu_root_role:
-                        menu_root = root
-                        break
-                except Exception:
-                    pass
-    
-                parent = getattr(root, "parent", None)
-                if not parent:
-                    break
-                if pid is not None and getattr(parent, "processID", None) != pid:
-                    break
-    
-                # hwnd koparsa (Chrome katmanları) en fazla burada bırak
-                if hwnd is not None and getattr(parent, "windowHandle", None) != hwnd:
-                    break
-    
-                root = parent
-    
+                    KIG.fromName("downArrow").send()
+                except Exception as e:
+                    logger.error(f"[Kopyala] Aşağı ok gönderilemedi: {e}")
+                wx.CallLater(180, self._MurText_try_invoke_copy, True, deneme_no + 1)
+                return
+
+            hedef = _komsu_dugumlerde_ara(focus, copy_anahtar, pid)
+            if hedef:
+                _tikla_ve_devam_et(hedef)
+                return
+
+            menu_root = _MurText_nearest_menu_root(focus)
             if menu_root:
-                root = menu_root
-                logger.info(f"[Kopyala] Menü kökü daraltıldı: {_obj_ozet(root)}")
-            else:
-                logger.info(f"[Kopyala] Tarama kökü: {_obj_ozet(root)}")
-    
-            # 2) Root altında ara
-            ziyaret = 0
-            max_dugum = 900
-            stack = [root]
-            seen = set()
-    
-            while stack and ziyaret < max_dugum:
-                node = stack.pop()
-                if not node:
-                    continue
-    
-                node_id = id(node)
-                if node_id in seen:
-                    continue
-                seen.add(node_id)
-                ziyaret += 1
-    
-                try:
-                    nname_n = _n(getattr(node, "name", ""))
-                except Exception:
-                    nname_n = ""
-    
-                if copy_anahtar and nname_n and (copy_anahtar in nname_n):
-                    logger.info(f"[Kopyala] Hedef bulundu: {_obj_ozet(node)}")
-                    node.doAction()
-                    wx.CallLater(300, MurText_WhatsApp)
+                logger.info(f"[Kopyala] En yakın menü kökü bulundu: {_obj_ozet(menu_root)}")
+                hedef = _menu_agacinda_ara(menu_root, copy_anahtar, pid)
+                if hedef:
+                    _tikla_ve_devam_et(hedef)
                     return
-    
-                try:
-                    kids = getattr(node, "children", None) or []
-                    for k in reversed(kids):
-                        if pid is not None and getattr(k, "processID", None) != pid:
-                            continue
-                        stack.append(k)
-                except Exception:
-                    pass
-    
-            logger.info(f"[Kopyala] Walk bitti. Gezilen düğüm sayısı: {ziyaret}")
-    
-            # 3) Bulunamadıysa: denemeyi sürdür (UI mesajını sadece en sonda ver)
+            else:
+                logger.info("[Kopyala] En yakın menü kökü bulunamadı")
+
+            try:
+                ebeveyn = getattr(focus, "parent", None)
+                if ebeveyn:
+                    logger.info(f"[Kopyala] Ebeveyn üzerinden son tarama yapılıyor: {_obj_ozet(ebeveyn)}")
+                    hedef = _menu_agacinda_ara(ebeveyn, copy_anahtar, pid)
+                    if hedef:
+                        _tikla_ve_devam_et(hedef)
+                        return
+            except Exception as e:
+                logger.error(f"[Kopyala] Ebeveyn taraması hatası: {e}")
+
             if deneme_no < max_deneme:
-                # Yavaş cihazlar için küçük artan gecikmeler
-                gecikmeler = {1: 350, 2: 550, 3: 800}
-                wx.CallLater(gecikmeler.get(deneme_no, 800), self._MurText_try_invoke_copy, True, deneme_no + 1)
+                gecikmeler = {0: 250, 1: 350, 2: 500, 3: 700}
+                wx.CallLater(gecikmeler.get(deneme_no, 700), self._MurText_try_invoke_copy, True, deneme_no + 1)
                 return
-    
-            # 4) Tüm denemeler bitti: tek UI mesajı
+
             ui.message(tr("The file has not been downloaded yet or the Copy option is unavailable. Please open the Settings dialog and save the Copy label you see in WhatsApp’s context menu."))
-    
+
         except Exception as e:
             logger.error(f"[Kopyala] Genel hata: {e}")
             ui.message(tr("Could not click the Copy option. Please open the Settings dialog and save the Copy label you see in WhatsApp’s context menu."))
-    
