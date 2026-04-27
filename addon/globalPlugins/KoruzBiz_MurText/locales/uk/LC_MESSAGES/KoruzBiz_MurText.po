@@ -1,8 +1,15 @@
 msgid ""
 msgstr ""
+"Project-Id-Version: \n"
+"POT-Creation-Date: \n"
+"PO-Revision-Date: \n"
+"Last-Translator: \n"
+"Language-Team: \n"
+"Language: uk\n"
+"MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"Language: uk\n"
+"X-Generator: Poedit 3.9\n"
 
 # Genel
 msgid "MurText"
@@ -21,16 +28,16 @@ msgid "Default file save location"
 msgstr "Типове місце збереження файлів"
 
 msgid "Select the save folder"
-msgstr "Виберіть теку для збереження"
+msgstr "Виберіть папку для збереження"
 
 msgid "Default save folder for MurText"
-msgstr "Типова тека для  збереження MurText"
+msgstr "Типова папка для  збереження MurText"
 
 msgid "Browse"
 msgstr "Огляд"
 
 msgid "copy"
-msgstr "Копіювати"
+msgstr "копіювати"
 
 msgid "Copy"
 msgstr "Копіювати"
@@ -64,7 +71,7 @@ msgid "WhatsApp is not focused."
 msgstr "Вікно WhatsApp не у фокусі."
 
 msgid "Context menu not found."
-msgstr "Контекстне меню не знайдено"
+msgstr "Контекстне меню не знайдено."
 
 msgid "The file has not been downloaded yet or the Copy option is unavailable. Please open the Settings dialog and save the Copy label you see in WhatsApp’s context menu."
 msgstr "Файл ще не завантажено або параметр Копіювати недоступний. Відкрийте діалогове вікно налаштувань і збережіть мітку Копіювати, яку ви бачите в контекстному меню WhatsApp."
@@ -72,15 +79,15 @@ msgstr "Файл ще не завантажено або параметр Коп
 msgid "Define the Copy label in WhatsApp Desktop."
 msgstr "Визначте мітку Копіювати у WhatsApp Desktop."
 
-# Hata mesajları 
+# Hata mesajları
 msgid "An error occurred."
 msgstr "Сталася помилка."
 
 msgid "Invalid procedure or file path."
-msgstr "Неправильна процедура або шлях до файлу"
+msgstr "Неправильна процедура або шлях до файлу."
 
 msgid "Failed to retrieve file from clipboard."
-msgstr "Не вдалося отримати файл із буфера обміну"
+msgstr "Не вдалося отримати файл із буфера обміну."
 
 msgid "An error occurred while identifying the application."
 msgstr "Під час визначення програми сталася помилка."
@@ -98,6 +105,5 @@ msgstr "MurText не знайдено"
 msgid "You cannot proceed without MurText, a free application. Would you like to download it?"
 msgstr "Ви не можете продовжити без MurText — безкоштовної програми. Завантажити зараз?"
 
-
 msgid "The MurText add-on is not configured for this application."
-msgstr "Додаток MurText не налаштований для цієї програми"
+msgstr "Додаток MurText не налаштований для цієї програми."
