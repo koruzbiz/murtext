@@ -4,14 +4,14 @@
 **Autor:** Murat Kefeli – Koruz.biz (Associação dos Cegos) – https://koruz.biz  
 **Compatibilidade com o NVDA:** Versão 2022.1 e posteriores  
 
-**Para um retorno mais rápido, use: [https://koruz.biz/ekle.asp?mainID=AM6PcMeY&refID=AM6PcMeY&langID=1](https://koruz.biz/ekle.asp?mainID=AM6PcMeY&refID=AM6PcMeY&langID=1)**
-**[Clique aqui para baixar a versão mais recente](https://murtext.org?page=nvda)**
+**Para um retorno mais rápido, use: [https://murtext.org/contact.aspx?sID=11](https://murtext.org/contact.aspx?sID=11)**  
+**[Clique aqui para baixar a versão mais recente](https://murtext.org?page=download)**
 
 Use o atalho de título (1) para ver as notas de versão.
 
 ## MurText
 Transcrição gratuita e ilimitada!
-Com um único atalho, transcreva arquivos de áudio/vídeo e mensagens de voz do WhatsApp instantaneamente.
+Com um único atalho, transcreva arquivos de áudio/vídeo e mensagens de voz do WhatsApp instantaneamente e gere arquivos de legendas.
 Use o mesmo atalho para salvar rapidamente outros arquivos do aplicativo WhatsApp para desktop.
 
 **Tecla de atalho:** NVDA + Alt + Q
@@ -20,11 +20,18 @@ Use o mesmo atalho para salvar rapidamente outros arquivos do aplicativo WhatsAp
 - A transcrição é feita localmente no seu computador. Os arquivos nunca são enviados para a internet.
 - Após a instalação, você pode transcrever mesmo estando offline.
 - Sem limitações de tamanho ou duração de arquivo.
+- Recurso de reconhecimento de locutores.
+- Geração automática de legendas.
 - A tecla de atalho é multifuncional:
 	- No WhatsApp, transcreve mensagens de voz.
 	- Para outros tipos de arquivo, salva o arquivo no diretório padrão.
 
 # Notas de versão
+## 3.0.1
+- Compatibilidade com MurText 3.0.1 adicionada.
+- Número de extensões de arquivo suportadas aumentado.
+- Compatibilidade com atualizações do WhatsApp Desktop estabelecida.
+
 ## 2.1.1
 • Adicionado recurso de reconhecimento de rótulos para o WhatsApp Desktop. Se você receber o aviso Não foi possível clicar no menu Copiar, abra Configurações do NVDA → categoria Koruz.biz MurText e salve o rótulo Copiar como aparece no menu de contexto do WhatsApp.
 

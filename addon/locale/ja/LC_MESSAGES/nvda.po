@@ -7,8 +7,11 @@ msgstr ""
 msgid "Koruz.biz MurText"
 msgstr "Körüz.biz MurText"
 
-msgid "An NVDA add-on for the MurText application that converts audio/video files and WhatsApp voice messages into text in over 100 languages. Free and unlimited speech-to-text conversion! With a single shortcut, instantly convert audio/video files and WhatsApp voice messages into text. Use the same shortcut to quickly save other files from the WhatsApp desktop app."
-msgstr "MurText アプリ用の NVDA アドオンで、音声および動画ファイル、さらに WhatsApp 音声メッセージを100以上の言語でテキストに変換できます。無料で無制限の音声からテキストへの変換が可能です。単一のショートカットで音声/動画ファイルや WhatsApp 音声メッセージを瞬時にテキストに変換できます。同じショートカットを使って WhatsApp デスクトップアプリの他のファイルも素早く保存できます。"
+msgid "An NVDA add-on for the MurText application that converts audio/video files and WhatsApp voice messages into text in over 100 languages, and generates subtitles (.srt .vtt). Free and unlimited speech-to-text conversion! With a single shortcut, instantly convert audio/video files and WhatsApp voice messages into text. Use the same shortcut to quickly save other files from the WhatsApp desktop app."
+msgstr "100以上の言語で音声/動画ファイルとWhatsApp音声メッセージをテキストに変換し、字幕（.srt .vtt）を生成するMurTextアプリケーション用NVDAアドオン。無料・無制限の音声テキスト変換！ひとつのショートカットで、音声/動画ファイルとWhatsApp音声メッセージを即座にテキストに変換できます。同じショートカットを使ってWhatsAppデスクトップアプリから他のファイルを素早く保存できます。"
 
-msgid "Added label recognition feature for WhatsApp Desktop. If you get the warning Could not click on the Copy menu, open NVDA Settings → Koruz.biz MurText category, and save the Copy label as it appears in your WhatsApp context menu."
-msgstr "WhatsApp Desktop 用のラベル認識機能を追加しました。「コピー」メニューをクリックできませんという警告が出た場合は、NVDA 設定 → Koruz.biz MurText カテゴリを開き、WhatsApp のコンテキストメニューに表示される「コピー」ラベルを保存してください。"
+msgid "Compatibility with MurText 3.0.1. Updated speaker recognition and subtitle file generation workflow. WhatsApp Desktop compatibility updates applied."
+msgstr "MurText 3.0.1との互換性。話者認識および字幕ファイル生成ワークフローを更新。WhatsApp Desktop互換性アップデートを適用。"
+
+msgid "Koruz.biz MurText mp3/mp4 convert to TXT, SRT, VTT"
+msgstr "Koruz.biz MurText mp3/mp4 convert to TXT, SRT, VTT"

@@ -61,7 +61,7 @@ except Exception:
     ROLE_POPUPMENU = ROLE_MENU = ROLE_MENUITEM = None
 
 # Proje sabitleri / Project strings
-ALLOWED_EXTS = (".opus", ".mp3", ".mp4", ".m4a", ".mpeg", ".aac", ".flac", ".ogg", ".wav", ".dat", ".waptt")
+ALLOWED_EXTS = (".opus", ".mp3", ".mp4", ".m4a", ".mpeg", ".aac", ".flac", ".ogg", ".wav", ".dat", ".waptt", ".avi", ".flv", ".m4v", ".mkv", ".mov", ".mpg", ".ts")
 MurText_path = os.path.join(os.environ.get("LOCALAPPDATA", os.path.join(os.path.expanduser("~"), "AppData", "Local")), "Koruz_Biz", "MurText", "MurText.exe")
 MurText_INSTALLED = False
 APP_WhatsApp = "WhatsApp"
@@ -122,7 +122,7 @@ def _MurText_get_real_desktop():
             val, _ = reg.QueryValueEx(key, "Desktop")
             path = os.path.expandvars(val)
             if os.path.isdir(path):
-                #-! logger.info(f"[Desktop] Reg Desktop: {path}")
+                #! logger.info(f"[Desktop] Reg Desktop: {path}")
                 return path
     except Exception as e:
         logger.error(f"[Desktop] _MurText_get_real_desktop Reg okunamadı: {e}")
@@ -371,6 +371,7 @@ def MurText_WhatsApp():
             capture_output=True,
             text=True,
             encoding="utf-8",
+            creationflags=0x08000000,
         )
 
         if result.returncode != 0:
@@ -402,6 +403,15 @@ def MurText_WhatsApp():
             #! "Panodan dosya alınamadı."
             ui.message(tr("Failed to retrieve file from clipboard."))
             return
+
+        try:
+            import ctypes
+            ctypes.windll.user32.OpenClipboard(0)
+            ctypes.windll.user32.EmptyClipboard()
+            ctypes.windll.user32.CloseClipboard()
+            logger.info("[WA] Pano temizlendi.")
+        except Exception as e:
+            logger.error(f"[WA] Pano temizlenemedi: {e}")
 
         try:
             time.sleep(0.1)
@@ -442,7 +452,7 @@ def MurText_which_app():
         window_class = str(getattr(obj, "windowClassName", "")).lower()
         role = str(getattr(obj, "role", "")).lower()
         name = str(getattr(obj, "name", "")).lower()
-        #-! logger.info(f"[Ctx] app={app_name}, class={window_class}, role={role}, name={name}")
+        #! logger.info(f"[Ctx] app={app_name}, class={window_class}, role={role}, name={name}")
 
         if MurText_is_WhatsApp_context():
             logger.info("[Ctx] Tespit: WhatsApp")
@@ -723,7 +733,7 @@ class GlobalPlugin(_BaseGlobalPlugin):
 
         # Sadece tutucu false ise 
         if not MurText_INSTALLED:
-            #-! logger.info("Varlık kontrol ediliyor...")
+            #! logger.info("Varlık kontrol ediliyor...")
             if not MurText_probe_installation_on_load():
                 # Kurulu değil -> pencere açıldı, işi kesiyoruz
                 return
@@ -742,12 +752,12 @@ class GlobalPlugin(_BaseGlobalPlugin):
                 return
 
             if ctx == APP_DESKTOP:
-                #-! logger.info("[Master] Masaüstü algılandı, MurText_open çağrılıyor")
+                #! logger.info("[Master] Masaüstü algılandı, MurText_open çağrılıyor")
                 MurText_open(source=APP_DESKTOP)
                 return
 
             if ctx == APP_EXPLORER:
-                #-! logger.info("[Master] Gezginde tetiklendi, MurText_open çağrılıyor")
+                #! logger.info("[Master] Gezginde tetiklendi, MurText_open çağrılıyor")
                 MurText_open(source=APP_EXPLORER)
                 return
 
@@ -926,6 +936,15 @@ class GlobalPlugin(_BaseGlobalPlugin):
                 try:
                     odak = api.getFocusObject()
                     logger.info(f"[Kopyala] Menü açma sonrası odak: name={getattr(odak, 'name', None)!r}, role={getattr(odak, 'role', None)!r}")
+                    try:
+                        from controlTypes import Role
+                        if getattr(odak, "role", None) == Role.TOGGLEBUTTON:
+                            logger.info("[Kopyala] Emoji paneli tespit edildi (TOGGLEBUTTON). Tab gönderiliyor.")
+                            KIG.fromName("tab").send()
+                            wx.CallLater(200, self._MurText_try_invoke_copy, True, 1)
+                            return
+                    except Exception as e:
+                        logger.error(f"[Kopyala] Emoji panel kontrolü hatası: {e}")
                 except Exception as e:
                     logger.error(f"[Kopyala] Menü açma sonrası odak okunamadı: {e}")
                 wx.CallLater(120, self._MurText_try_invoke_copy, True, 1)
@@ -991,7 +1010,7 @@ class GlobalPlugin(_BaseGlobalPlugin):
                     except Exception as e2:
                         logger.error(f"[Kopyala] Enter gönderilemedi: {e2}")
                         return False
-                wx.CallLater(300, MurText_WhatsApp)
+                wx.CallLater(999, MurText_WhatsApp)
                 return True
 
             def _odak_kopyala_mi(odak, copy_anahtar):

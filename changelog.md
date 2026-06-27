@@ -1,5 +1,10 @@
 # Release Notes
 
+## 3.0.1
+- Added compatibility with MurText 3.0.1.
+- Increased number of supported file extensions.
+- Added compatibility with WhatsApp Desktop updates.
+
 ## 2.2.4
 Compatibility adjustments have been made with WhatsApp Desktop add-ons
 
@@ -14,15 +19,15 @@ Fixed UI message swallowed by WhatsApp.
 
 ## 2.2.1
 
-• New Whatsapp interface compatibility added. (2026 Jan)
+ï¿½ New Whatsapp interface compatibility added. (2026 Jan)
 
 
 
 ## 2.1.1
 
-• Added label recognition feature for WhatsApp Desktop. If you get the warning Could not click on the Copy menu, open NVDA Settings ? Koruz.biz MurText category, and save the Copy label as it appears in your WhatsApp context menu.
+ï¿½ Added label recognition feature for WhatsApp Desktop. If you get the warning Could not click on the Copy menu, open NVDA Settings ? Koruz.biz MurText category, and save the Copy label as it appears in your WhatsApp context menu.
 
 ## 2.0.2
 
-• Updated language packages.
+ï¿½ Updated language packages.
 

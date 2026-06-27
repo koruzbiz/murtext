@@ -1,17 +1,17 @@
-﻿
+
 # Koruz.biz MurText
 
 **著者:** Murat Kefeli – Koruz.biz (盲人協会) – https://koruz.biz  
 **NVDA 互換性:** バージョン 2022.1 以降  
 
-**迅速なフィードバックのために、こちらをご利用ください：[https://koruz.biz/ekle.asp?mainID=AM6PcMeY&refID=AM6PcMeY&langID=1](https://koruz.biz/ekle.asp?mainID=AM6PcMeY&refID=AM6PcMeY&langID=1)**
-**[最新バージョンをダウンロードするにはここをクリック](https://murtext.org?page=nvda)**
+**迅速なフィードバックのために、こちらをご利用ください：[https://murtext.org/contact.aspx?sID=11](https://murtext.org/contact.aspx?sID=11)**  
+**[最新バージョンをダウンロードするにはここをクリック](https://murtext.org?page=download)**
 
 リリースノートを確認するには見出しショートカット (1) を使用してください。
 
 ## MurText
 無料かつ無制限の文字起こし！
-ショートカットキー1つで、音声/動画ファイルやWhatsAppの音声メッセージを即座に文字起こし。
+ショートカットキー1つで、音声/動画ファイルやWhatsAppの音声メッセージを即座に文字起こし、字幕ファイルも作成できます。
 同じショートカットキーで、WhatsAppデスクトップアプリから他のファイルもすばやく保存できます。
 
 **ショートカットキー：** NVDA + Alt + Q
@@ -20,11 +20,18 @@
 - 文字起こしはローカルで実行され、ファイルはインターネットにアップロードされません。
 - インストール後はオフラインでも文字起こしが可能です。
 - ファイルサイズや長さに制限はありません。
+- 話者認識機能。
+- 字幕の自動生成機能。
 - ショートカットキーは多機能です：
 	- WhatsAppでは音声メッセージを文字起こしします。
 	- その他のファイル形式では、既定のフォルダーに保存されます。
 
 # リリースノート
+## 3.0.1
+- MurText 3.0.1 との互換性を追加しました。
+- サポートされるファイル拡張子の数を増やしました。
+- WhatsApp Desktop のアップデートとの互換性を確保しました。
+
 ## 2.1.1
 • WhatsApp Desktop 用のラベル認識機能を追加しました。「コピー」メニューをクリックできませんという警告が出た場合は、NVDA 設定 → Koruz.biz MurText カテゴリを開き、WhatsApp のコンテキストメニューに表示される「コピー」ラベルを保存してください。
 

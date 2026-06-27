@@ -1,11 +1,11 @@
-﻿
+
 # Koruz.biz MurText
 
 **लेखक:** Murat Kefeli – Koruz.biz (नेत्रहीन संघ) – https://koruz.biz  
 **NVDA संगतता:** संस्करण 2022.1 और बाद के संस्करण  
 
-**तेज़ प्रतिक्रिया के लिए कृपया इसका उपयोग करें: [https://koruz.biz/ekle.asp?mainID=AM6PcMeY&refID=AM6PcMeY&langID=1](https://koruz.biz/ekle.asp?mainID=AM6PcMeY&refID=AM6PcMeY&langID=1)**
-**[नवीनतम संस्करण डाउनलोड करने के लिए यहाँ क्लिक करें](https://murtext.org?page=nvda)**
+**तेज़ प्रतिक्रिया के लिए कृपया इसका उपयोग करें: [https://murtext.org/contact.aspx?sID=11](https://murtext.org/contact.aspx?sID=11)**  
+**[नवीनतम संस्करण डाउनलोड करने के लिए यहाँ क्लिक करें](https://murtext.org?page=download)**
 
 रिलीज नोट्स देखने के लिए हेडिंग शॉर्टकट (1) का उपयोग करें।
 
@@ -25,6 +25,11 @@
 	- अन्य फ़ाइल प्रकारों के लिए, यह फ़ाइल को आपके डिफ़ॉल्ट फ़ोल्डर में सहेजता है।  
 
 	# रिलीज नोट्स
+## 3.0.1
+- MurText 3.0.1 के साथ संगतता जोड़ी गई।
+- समर्थित फ़ाइल एक्सटेंशन की संख्या बढ़ाई गई।
+- WhatsApp Desktop अपडेट के साथ संगतता सुनिश्चित की गई।
+
 ## 2.1.1
 • WhatsApp Desktop के लिए लेबल पहचान सुविधा जोड़ी गई है। यदि आपको चेतावनी मिलती है कि कॉपी मेनू पर क्लिक नहीं किया जा सका, तो NVDA सेटिंग्स → Koruz.biz MurText श्रेणी खोलें और अपने WhatsApp संदर्भ मेनू में दिखाई देने वाले अनुसार कॉपी लेबल सहेजें।
 

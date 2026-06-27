@@ -7,8 +7,12 @@ msgstr ""
 msgid "Koruz.biz MurText"
 msgstr "Körüz.biz MurText"
 
-msgid "An NVDA add-on for the MurText application that converts audio/video files and WhatsApp voice messages into text in over 100 languages. Free and unlimited speech-to-text conversion! With a single shortcut, instantly convert audio/video files and WhatsApp voice messages into text. Use the same shortcut to quickly save other files from the WhatsApp desktop app."
-msgstr "Un complemento de NVDA para la aplicación MurText que convierte sus archivos de audio y video, así como los mensajes de voz de WhatsApp, en texto en más de 100 idiomas. ¡Conversión de voz a texto gratuita e ilimitada! Con un solo acceso directo, convierte al instante archivos de audio y video y mensajes de voz de WhatsApp en texto. Usa el mismo acceso directo para guardar rápidamente otros archivos desde la aplicación de escritorio de WhatsApp."
+msgid "An NVDA add-on for the MurText application that converts audio/video files and WhatsApp voice messages into text in over 100 languages, and generates subtitles (.srt .vtt). Free and unlimited speech-to-text conversion! With a single shortcut, instantly convert audio/video files and WhatsApp voice messages into text. Use the same shortcut to quickly save other files from the WhatsApp desktop app."
+msgstr "Un complemento de NVDA para la aplicación MurText que convierte archivos de audio/video y mensajes de voz de WhatsApp en texto en más de 100 idiomas, y genera subtítulos (.srt .vtt). ¡Conversión de voz a texto gratuita e ilimitada! Con un solo atajo, convierta instantáneamente archivos de audio/video y mensajes de voz de WhatsApp en texto. Use el mismo atajo para guardar rápidamente otros archivos desde la aplicación de escritorio de WhatsApp."
 
-msgid "Added label recognition feature for WhatsApp Desktop. If you get the warning Could not click on the Copy menu, open NVDA Settings → Koruz.biz MurText category, and save the Copy label as it appears in your WhatsApp context menu."
-msgstr "Se agregó la función de reconocimiento de etiquetas para WhatsApp Desktop. Si recibes la advertencia No se pudo hacer clic en el menú Copiar, abre Configuración de NVDA → categoría Koruz.biz MurText y guarda la etiqueta Copiar tal como aparece en tu menú contextual de WhatsApp."
+msgid "Compatibility with MurText 3.0.1. Updated speaker recognition and subtitle file generation workflow. WhatsApp Desktop compatibility updates applied."
+msgstr "Compatibilidad con MurText 3.0.1. Flujo de trabajo de reconocimiento de hablantes y generación de archivos de subtítulos actualizado. Actualizaciones de compatibilidad con WhatsApp Desktop aplicadas."
+
+msgid "Koruz.biz MurText mp3/mp4 convert to TXT, SRT, VTT"
+msgstr "Koruz.biz MurText mp3/mp4 convert to TXT, SRT, VTT"
+
