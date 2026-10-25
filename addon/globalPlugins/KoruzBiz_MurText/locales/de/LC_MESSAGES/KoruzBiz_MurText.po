@@ -5,92 +5,126 @@ msgstr ""
 "Language: de\n"
 
 # Allgemein
-msgid "MurText"
-msgstr "MurText"
-
-msgid "Koruz.biz MurText"
-msgstr "Koruz.biz MurText"
-
-msgid "Default file save location"
-msgstr "Standard-Speicherort für Dateien"
-
-msgid "Select the save folder"
-msgstr "Speicherordner auswählen"
-
-msgid "Default save folder for MurText"
-msgstr "Standard-Speicherordner für MurText"
-
-msgid "Browse"
-msgstr "Durchsuchen"
-
-msgid "copy"
-msgstr "kopieren"
-
-msgid "Copy"
-msgstr "Kopieren"
-
-msgid "desktop"
-msgstr "desktop"
-
-msgid "Desktop"
-msgstr "Desktop"
-
-msgid "explorer"
-msgstr "datei-explorer"
-
-msgid "Explorer"
-msgstr "Datei-Explorer"
-
-# WhatsApp
-msgid "The file was saved with MurText."
-msgstr "Die Datei wurde mit MurText gespeichert."
-
-msgid "The file could not be saved."
-msgstr "Die Datei konnte nicht gespeichert werden."
-
-msgid "Could not click the Copy option. Please open the Settings dialog and save the Copy label you see in WhatsApp’s context menu."
-msgstr "Die Option Kopieren konnte nicht angeklickt werden. Öffnen Sie den Einstellungsdialog und speichern Sie die Kopieren-Bezeichnung, die Sie im Kontextmenü von WhatsApp sehen."
-
-msgid "Failed to open the menu."
-msgstr "Menü konnte nicht geöffnet werden."
-
-msgid "WhatsApp is not focused."
-msgstr "WhatsApp ist nicht im Fokus."
-
-msgid "Context menu not found."
-msgstr "Kontextmenü nicht gefunden."
-
-msgid "The file has not been downloaded yet or the Copy option is unavailable. Please open the Settings dialog and save the Copy label you see in WhatsApp’s context menu."
-msgstr "Die Datei wurde noch nicht heruntergeladen oder die Option Kopieren ist nicht verfügbar. Öffnen Sie den Einstellungsdialog und speichern Sie die Kopieren-Bezeichnung, die Sie im Kontextmenü von WhatsApp sehen."
-
-msgid "Define the Copy label in WhatsApp Desktop."
-msgstr "Definieren Sie die Bezeichnung Kopieren in WhatsApp Desktop."
-
-# Fehlermeldungen
-msgid "An error occurred."
-msgstr "Ein Fehler ist aufgetreten."
-
-msgid "Invalid procedure or file path."
-msgstr "Ungültiger Vorgang oder Dateipfad."
-
-msgid "Failed to retrieve file from clipboard."
-msgstr "Datei konnte nicht aus der Zwischenablage abgerufen werden."
 
 msgid "An error occurred while identifying the application."
 msgstr "Beim Erkennen der Anwendung ist ein Fehler aufgetreten."
 
 # Meldungen
-msgid "Opening with MurText. Preparing the application."
-msgstr "Wird mit MurText geöffnet. Anwendung wird vorbereitet."
 
-msgid "The selected item is not supported by MurText."
-msgstr "Das ausgewählte Element wird von MurText nicht unterstützt."
+msgid "An error occurred."
+msgstr "Ein Fehler ist aufgetreten."
+
+msgid "Ask me every time"
+msgstr "Jedes Mal nachfragen"
+
+msgid "Copy"
+msgstr "Kopieren"
+
+# WhatsApp
+
+msgid "Copy or Download was not found in the menu. The file may not be downloaded yet, or the download may still be in progress; try again in a few seconds. If the problem persists, check the Copy and Download labels in the settings."
+msgstr "Im Menü wurde weder Kopieren noch Herunterladen gefunden. Die Datei wurde möglicherweise noch nicht heruntergeladen, oder der Download läuft noch; versuchen Sie es in einigen Sekunden erneut. Besteht das Problem weiterhin, prüfen Sie die Beschriftungen für Kopieren und Herunterladen in den Einstellungen."
+
+msgid "Could not click the Copy option. Please open the Settings dialog and save the Copy label you see in WhatsApp’s context menu."
+msgstr "Die Option Kopieren konnte nicht angeklickt werden. Öffnen Sie den Einstellungsdialog und speichern Sie die Kopieren-Bezeichnung, die Sie im Kontextmenü von WhatsApp sehen."
+
+msgid "Default file save location"
+msgstr "Standard-Speicherort für Dateien"
+
+msgid "Define the Copy label in WhatsApp Desktop."
+msgstr "Definieren Sie die Bezeichnung Kopieren in WhatsApp Desktop."
+
+# Fehlermeldungen
+
+msgid "Define the Download label in WhatsApp Desktop."
+msgstr "Legen Sie die Beschriftung „Herunterladen“ in WhatsApp Desktop fest."
+
+msgid "Enter the context-menu \"Copy\" text as shown in WhatsApp Desktop (e.g. \"Copy\", \"Kopyala\", \"複製\")."
+msgstr "Geben Sie den Text „Kopieren“ des Kontextmenüs so ein, wie er in WhatsApp Desktop angezeigt wird (e.g. \"Copy\", \"Kopyala\", \"複製\")."
+
+msgid "Enter the context-menu \"Download\" text as shown in WhatsApp Desktop (e.g. \"Download\", \"İndir\", \"下載\"). Use \";\" to separate multiple equivalents."
+msgstr "Geben Sie den Text „Herunterladen“ des Kontextmenüs so ein, wie er in WhatsApp Desktop angezeigt wird (e.g. \"Download\", \"İndir\", \"下載\"). Mehrere Entsprechungen trennen Sie mit „;“."
+
+msgid "Failed to open the menu."
+msgstr "Menü konnte nicht geöffnet werden."
+
+msgid "Failed to retrieve file from clipboard."
+msgstr "Datei konnte nicht aus der Zwischenablage abgerufen werden."
+
+msgid "Invalid procedure or file path."
+msgstr "Ungültiger Vorgang oder Dateipfad."
+
+msgid "Koruz.biz MurText"
+msgstr "Koruz.biz MurText"
+
+msgid "MurText"
+msgstr "MurText"
+
+msgid "MurText - Select task type"
+msgstr "MurText - Aufgabentyp auswählen"
+
+msgid "MurText is waiting for the download to finish."
+msgstr "MurText wartet, bis der Download abgeschlossen ist."
 
 msgid "MurText not found"
 msgstr "MurText nicht gefunden"
 
-msgid "You cannot proceed without MurText, a free application. Would you like to download it?"
-msgstr "Ohne MurText, eine kostenlose Anwendung, können Sie nicht fortfahren. Möchten Sie es herunterladen?"
+msgid "Opening with MurText. Preparing the application."
+msgstr "Wird mit MurText geöffnet. Anwendung wird vorbereitet."
+
+msgid "Please switch modes first with NVDA+SPACE."
+msgstr "Bitte wechseln Sie zuerst mit NVDA+SPACE den Modus."
+
+msgid "Remember my choice"
+msgstr "Meine Auswahl merken"
+
+msgid "Save audio / video files to the folder"
+msgstr "Audio-/Videodateien im Ordner speichern"
+
+msgid "Save the file"
+msgstr "Datei speichern"
+
+msgid "Select folder"
+msgstr "Ordner auswählen"
+
+msgid "Select the save folder"
+msgstr "Speicherordner auswählen"
+
+msgid "Send audio / video files to MurText"
+msgstr "Audio-/Videodateien an MurText senden"
+
+msgid "Send the file to MurText"
+msgstr "Datei an MurText senden"
+
+msgid "Specify the task type"
+msgstr "Aufgabentyp festlegen"
+
+msgid "The downloaded file was not found. Check the browser's download location."
+msgstr "Die heruntergeladene Datei wurde nicht gefunden. Überprüfen Sie den Download-Speicherort des Browsers."
+
+msgid "The file could not be saved."
+msgstr "Die Datei konnte nicht gespeichert werden."
+
+msgid "The file has not been downloaded yet or the Copy option is unavailable. Please open the Settings dialog and save the Copy label you see in WhatsApp’s context menu."
+msgstr "Die Datei wurde noch nicht heruntergeladen oder die Option Kopieren ist nicht verfügbar. Öffnen Sie den Einstellungsdialog und speichern Sie die Kopieren-Bezeichnung, die Sie im Kontextmenü von WhatsApp sehen."
+
+msgid "The file is downloading. Please try again in a few seconds."
+msgstr "Die Datei wird heruntergeladen. Bitte versuchen Sie es in einigen Sekunden erneut."
+
+msgid "The file was saved with MurText."
+msgstr "Die Datei wurde mit MurText gespeichert."
+
+msgid "The message's menu button was not found. Move focus to the first line of the message and try again."
+msgstr "Die Menüschaltfläche der Nachricht wurde nicht gefunden. Setzen Sie den Fokus auf die erste Zeile der Nachricht und versuchen Sie es erneut."
 
 msgid "The MurText add-on is not configured for this application."
 msgstr "Das MurText-Add-on ist für diese Anwendung nicht konfiguriert."
+
+msgid "The selected item is not supported by MurText."
+msgstr "Das ausgewählte Element wird von MurText nicht unterstützt."
+
+msgid "What would you like to do?"
+msgstr "Was möchten Sie tun?"
+
+msgid "You cannot proceed without MurText, a free application. Would you like to download it?"
+msgstr "Ohne MurText, eine kostenlose Anwendung, können Sie nicht fortfahren. Möchten Sie es herunterladen?"

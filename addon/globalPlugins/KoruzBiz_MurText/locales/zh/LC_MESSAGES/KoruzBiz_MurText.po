@@ -5,98 +5,126 @@ msgstr ""
 "Language: zh\n"
 
 # Genel
-msgid "MurText"
-msgstr "MurText"
-
-msgid "Koruz.biz MurText"
-msgstr "Koruz.biz MurText"
-
-msgid "An NVDA add-on that transcribes audio/video files on your computer and WhatsApp voice messages into text in 100 languages."
-msgstr "一个 NVDA 插件，可将您电脑上的音频/视频文件和 WhatsApp 语音消息转录为 100 种语言的文本。"
-
-msgid "With a single shortcut, transcribe audio/video files on your PC and WhatsApp Desktop with no time limits. Save .doc, .zip and similar files from WhatsApp with the same shortcut."
-msgstr "只需一个快捷键，即可无限制地转录 PC 和 WhatsApp 桌面上的音频/视频文件。还可以用同一快捷键保存来自 WhatsApp 的 .doc、.zip 等文件。"
-
-msgid "Default file save location"
-msgstr "默认文件保存位置"
-
-msgid "Select the save folder"
-msgstr "选择保存文件夹"
-
-msgid "Default save folder for MurText"
-msgstr "MurText 的默认保存文件夹"
-
-msgid "Browse"
-msgstr "浏览"
-
-msgid "copy"
-msgstr "复制"
-
-msgid "Copy"
-msgstr "复制"
-
-msgid "desktop"
-msgstr "桌面"
-
-msgid "Desktop"
-msgstr "桌面"
-
-msgid "explorer"
-msgstr "资源管理器"
-
-msgid "Explorer"
-msgstr "资源管理器"
-
-# WhatsApp
-msgid "The file was saved with MurText."
-msgstr "文件已通过 MurText 保存。"
-
-msgid "The file could not be saved."
-msgstr "文件无法保存。"
-
-msgid "Could not click the Copy option. Please open the Settings dialog and save the Copy label you see in WhatsApp’s context menu."
-msgstr "无法点击复制选项。请打开设置对话框，并保存您在 WhatsApp 上下文菜单中看到的复制标签。"
-
-msgid "Failed to open the menu."
-msgstr "菜单打开失败。"
-
-msgid "WhatsApp is not focused."
-msgstr "WhatsApp 未获得焦点。"
-
-msgid "Context menu not found."
-msgstr "未找到上下文菜单。"
-
-msgid "The file has not been downloaded yet or the Copy option is unavailable. Please open the Settings dialog and save the Copy label you see in WhatsApp’s context menu."
-msgstr "文件尚未下载或复制选项不可用。请打开设置对话框，并保存您在 WhatsApp 上下文菜单中看到的复制标签。"
-
-msgid "Define the Copy label in WhatsApp Desktop."
-msgstr "请在 WhatsApp 桌面版中定义复制标签。"
-
-# Hata mesajları 
-msgid "An error occurred."
-msgstr "发生错误。"
-
-msgid "Invalid procedure or file path."
-msgstr "无效的过程或文件路径。"
-
-msgid "Failed to retrieve file from clipboard."
-msgstr "无法从剪贴板获取文件。"
 
 msgid "An error occurred while identifying the application."
 msgstr "识别应用程序时发生错误。"
 
 # Mesajlar
-msgid "Opening with MurText. Preparing the application."
-msgstr "正在用 MurText 打开。应用正在准备中。"
 
-msgid "The selected item is not supported by MurText."
-msgstr "所选项目不受 MurText 支持。"
+msgid "An error occurred."
+msgstr "发生错误。"
+
+msgid "Ask me every time"
+msgstr "每次都询问"
+
+msgid "Copy"
+msgstr "复制"
+
+# WhatsApp
+
+msgid "Copy or Download was not found in the menu. The file may not be downloaded yet, or the download may still be in progress; try again in a few seconds. If the problem persists, check the Copy and Download labels in the settings."
+msgstr "菜单中未找到“复制”或“下载”。文件可能尚未下载，或下载仍在进行；请几秒后重试。如果问题仍然存在，请在设置中检查“复制”和“下载”标签。"
+
+msgid "Could not click the Copy option. Please open the Settings dialog and save the Copy label you see in WhatsApp’s context menu."
+msgstr "无法点击复制选项。请打开设置对话框，并保存您在 WhatsApp 上下文菜单中看到的复制标签。"
+
+msgid "Default file save location"
+msgstr "默认文件保存位置"
+
+msgid "Define the Copy label in WhatsApp Desktop."
+msgstr "请在 WhatsApp 桌面版中定义复制标签。"
+
+# Hata mesajları 
+
+msgid "Define the Download label in WhatsApp Desktop."
+msgstr "请定义 WhatsApp Desktop 中的“下载”标签。"
+
+msgid "Enter the context-menu \"Copy\" text as shown in WhatsApp Desktop (e.g. \"Copy\", \"Kopyala\", \"複製\")."
+msgstr "请按 WhatsApp Desktop 中显示的内容输入右键菜单的“复制”文本(e.g. \"Copy\", \"Kopyala\", \"複製\")。"
+
+msgid "Enter the context-menu \"Download\" text as shown in WhatsApp Desktop (e.g. \"Download\", \"İndir\", \"下載\"). Use \";\" to separate multiple equivalents."
+msgstr "请按 WhatsApp Desktop 中显示的内容输入右键菜单的“下载”文本(e.g. \"Download\", \"İndir\", \"下載\")。多个对应文本请用“;”分隔。"
+
+msgid "Failed to open the menu."
+msgstr "菜单打开失败。"
+
+msgid "Failed to retrieve file from clipboard."
+msgstr "无法从剪贴板获取文件。"
+
+msgid "Invalid procedure or file path."
+msgstr "无效的过程或文件路径。"
+
+msgid "Koruz.biz MurText"
+msgstr "Koruz.biz MurText"
+
+msgid "MurText"
+msgstr "MurText"
+
+msgid "MurText - Select task type"
+msgstr "MurText - 选择任务类型"
+
+msgid "MurText is waiting for the download to finish."
+msgstr "MurText 正在等待下载完成。"
 
 msgid "MurText not found"
 msgstr "未找到 MurText"
 
-msgid "You cannot proceed without MurText, a free application. Would you like to download it?"
-msgstr "没有免费的 MurText 应用，您无法继续。是否要下载？"
+msgid "Opening with MurText. Preparing the application."
+msgstr "正在用 MurText 打开。应用正在准备中。"
+
+msgid "Please switch modes first with NVDA+SPACE."
+msgstr "请先使用 NVDA+SPACE 切换模式。"
+
+msgid "Remember my choice"
+msgstr "记住我的选择"
+
+msgid "Save audio / video files to the folder"
+msgstr "将音频 / 视频文件保存到文件夹"
+
+msgid "Save the file"
+msgstr "保存文件"
+
+msgid "Select folder"
+msgstr "选择文件夹"
+
+msgid "Select the save folder"
+msgstr "选择保存文件夹"
+
+msgid "Send audio / video files to MurText"
+msgstr "将音频 / 视频文件发送到 MurText"
+
+msgid "Send the file to MurText"
+msgstr "将文件发送到 MurText"
+
+msgid "Specify the task type"
+msgstr "指定任务类型"
+
+msgid "The downloaded file was not found. Check the browser's download location."
+msgstr "未找到已下载的文件。请检查浏览器的下载位置。"
+
+msgid "The file could not be saved."
+msgstr "文件无法保存。"
+
+msgid "The file has not been downloaded yet or the Copy option is unavailable. Please open the Settings dialog and save the Copy label you see in WhatsApp’s context menu."
+msgstr "文件尚未下载或复制选项不可用。请打开设置对话框，并保存您在 WhatsApp 上下文菜单中看到的复制标签。"
+
+msgid "The file is downloading. Please try again in a few seconds."
+msgstr "文件正在下载。请几秒后重试。"
+
+msgid "The file was saved with MurText."
+msgstr "文件已通过 MurText 保存。"
+
+msgid "The message's menu button was not found. Move focus to the first line of the message and try again."
+msgstr "未找到该消息的菜单按钮。请将焦点移到消息的第一行后重试。"
 
 msgid "The MurText add-on is not configured for this application."
 msgstr "MurText 插件未为此应用配置。"
+
+msgid "The selected item is not supported by MurText."
+msgstr "所选项目不受 MurText 支持。"
+
+msgid "What would you like to do?"
+msgstr "您想做什么？"
+
+msgid "You cannot proceed without MurText, a free application. Would you like to download it?"
+msgstr "没有免费的 MurText 应用，您无法继续。是否要下载？"

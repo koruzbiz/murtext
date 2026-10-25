@@ -20,13 +20,13 @@ addon_info = AddonInfo(
 	# Eklenti açıklaması
 	# Çevirmenler: Eklenti mağazasındaki eklenti bilgi ekranında gösterilecek uzun açıklama
 	#! "Bilgisayardaki ses/video dosyalarını ve WhatsApp ses dosyalarını 100 dilde yazıya dönüştüren MurText eklentisi."
-	addon_description=_("""An NVDA add-on for the MurText application that converts audio/video files and WhatsApp voice messages into text in over 100 languages, and generates subtitles (.srt .vtt). Free and unlimited speech-to-text conversion! With a single shortcut, instantly convert audio/video files and WhatsApp voice messages into text. Use the same shortcut to quickly save other files from the WhatsApp desktop app."""),
+	addon_description=_("""An NVDA add-on for the MurText application that converts audio/video files and WhatsApp voice messages into text in over 100 languages, and generates subtitles (.srt .vtt). Free and unlimited speech-to-text conversion! With a single shortcut, instantly convert audio/video files and WhatsApp voice messages into text. Use the same shortcut to quickly save other files from WhatsApp Desktop and WhatsApp Web."""),
 	# sürüm
-	addon_version="3.0.1",
+	addon_version="3.0.3",
 	# Bu sürüm için kısa değişiklik günlüğü
 	# Çevirmenler: Eklenti mağazasında gösterilecek bu eklenti sürümü için "yenilikler" içeriği
 	#! "Tek kısayolla bilgisayarınızdaki ve WhatsApp Masaüstü'ndeki ses/video dosyaları sınırsız sürede transkribe edin. WhatsApp'taki .doc, .zip vb. dosyaları aynı kısayolla kaydedin."
-	addon_changelog=_("""Compatibility with MurText 3.0.1. Updated speaker recognition and subtitle file generation workflow. WhatsApp Desktop compatibility updates applied."""),
+	addon_changelog=_("""Compatibility with MurText 3.0.3. Updated speaker recognition and subtitle file generation workflow. WhatsApp Desktop and WhatsApp Web compatibility updates applied."""),
 	# Yazar(lar)
 	addon_author="Murat Kefeli <bilgi@koruz.biz>",
 	# Eklenti dokümantasyon desteği için URL

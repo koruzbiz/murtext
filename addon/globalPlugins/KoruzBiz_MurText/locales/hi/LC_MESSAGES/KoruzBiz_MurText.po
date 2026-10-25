@@ -5,98 +5,126 @@ msgstr ""
 "Language: hi\n"
 
 # Genel
-msgid "MurText"
-msgstr "MurText"
-
-msgid "Koruz.biz MurText"
-msgstr "Koruz.biz MurText"
-
-msgid "An NVDA add-on that transcribes audio/video files on your computer and WhatsApp voice messages into text in 100 languages."
-msgstr "एक NVDA ऐड-ऑन जो आपके कंप्यूटर पर ऑडियो/वीडियो फ़ाइलों और WhatsApp वॉइस संदेशों को 100 भाषाओं में टेक्स्ट में ट्रांसक्राइब करता है।"
-
-msgid "With a single shortcut, transcribe audio/video files on your PC and WhatsApp Desktop with no time limits. Save .doc, .zip and similar files from WhatsApp with the same shortcut."
-msgstr "सिर्फ एक शॉर्टकट से, अपने पीसी और WhatsApp डेस्कटॉप पर ऑडियो/वीडियो फ़ाइलों को बिना समय सीमा के ट्रांसक्राइब करें। उसी शॉर्टकट से WhatsApp से .doc, .zip और इसी तरह की फ़ाइलें सहेजें।"
-
-msgid "Default file save location"
-msgstr "डिफ़ॉल्ट फ़ाइल सहेजने का स्थान"
-
-msgid "Select the save folder"
-msgstr "सहेजने का फ़ोल्डर चुनें"
-
-msgid "Default save folder for MurText"
-msgstr "MurText के लिए डिफ़ॉल्ट सहेजने का फ़ोल्डर"
-
-msgid "Browse"
-msgstr "ब्राउज़ करें"
-
-msgid "copy"
-msgstr "कॉपी"
-
-msgid "Copy"
-msgstr "कॉपी"
-
-msgid "desktop"
-msgstr "डेस्कटॉप"
-
-msgid "Desktop"
-msgstr "डेस्कटॉप"
-
-msgid "explorer"
-msgstr "एक्सप्लोरर"
-
-msgid "Explorer"
-msgstr "एक्सप्लोरर"
-
-# WhatsApp
-msgid "The file was saved with MurText."
-msgstr "फ़ाइल MurText के साथ सहेजी गई।"
-
-msgid "The file could not be saved."
-msgstr "फ़ाइल सहेजी नहीं जा सकी।"
-
-msgid "Could not click the Copy option. Please open the Settings dialog and save the Copy label you see in WhatsApp’s context menu."
-msgstr "कॉपी विकल्प पर क्लिक नहीं किया जा सका। कृपया सेटिंग्स डायलॉग खोलें और WhatsApp के संदर्भ मेनू में दिखाई देने वाला कॉपी लेबल सहेजें।"
-
-msgid "Failed to open the menu."
-msgstr "मेनू खोलने में विफल।"
-
-msgid "WhatsApp is not focused."
-msgstr "WhatsApp सक्रिय नहीं है।"
-
-msgid "Context menu not found."
-msgstr "संदर्भ मेनू नहीं मिला।"
-
-msgid "The file has not been downloaded yet or the Copy option is unavailable. Please open the Settings dialog and save the Copy label you see in WhatsApp’s context menu."
-msgstr "फ़ाइल अभी तक डाउनलोड नहीं हुई है या कॉपी विकल्प उपलब्ध नहीं है। कृपया सेटिंग्स डायलॉग खोलें और WhatsApp के संदर्भ मेनू में दिखाई देने वाला कॉपी लेबल सहेजें।"
-
-msgid "Define the Copy label in WhatsApp Desktop."
-msgstr "WhatsApp डेस्कटॉप में कॉपी लेबल परिभाषित करें।"
-
-# Hata mesajları 
-msgid "An error occurred."
-msgstr "एक त्रुटि हुई।"
-
-msgid "Invalid procedure or file path."
-msgstr "अमान्य प्रक्रिया या फ़ाइल पथ।"
-
-msgid "Failed to retrieve file from clipboard."
-msgstr "क्लिपबोर्ड से फ़ाइल प्राप्त करने में विफल।"
 
 msgid "An error occurred while identifying the application."
 msgstr "एप्लिकेशन की पहचान करते समय एक त्रुटि हुई।"
 
 # Mesajlar
-msgid "Opening with MurText. Preparing the application."
-msgstr "MurText के साथ खोला जा रहा है। एप्लिकेशन तैयार किया जा रहा है।"
 
-msgid "The selected item is not supported by MurText."
-msgstr "चयनित आइटम MurText द्वारा समर्थित नहीं है।"
+msgid "An error occurred."
+msgstr "एक त्रुटि हुई।"
+
+msgid "Ask me every time"
+msgstr "हर बार मुझसे पूछें"
+
+msgid "Copy"
+msgstr "कॉपी"
+
+# WhatsApp
+
+msgid "Copy or Download was not found in the menu. The file may not be downloaded yet, or the download may still be in progress; try again in a few seconds. If the problem persists, check the Copy and Download labels in the settings."
+msgstr "मेनू में न “कॉपी करें” मिला न “डाउनलोड करें”। संभव है फ़ाइल अभी डाउनलोड न हुई हो या डाउनलोड अभी जारी हो; कुछ सेकंड बाद फिर प्रयास करें। समस्या बनी रहे तो सेटिंग्स में “कॉपी करें” और “डाउनलोड करें” लेबल जाँचें।"
+
+msgid "Could not click the Copy option. Please open the Settings dialog and save the Copy label you see in WhatsApp’s context menu."
+msgstr "कॉपी विकल्प पर क्लिक नहीं किया जा सका। कृपया सेटिंग्स डायलॉग खोलें और WhatsApp के संदर्भ मेनू में दिखाई देने वाला कॉपी लेबल सहेजें।"
+
+msgid "Default file save location"
+msgstr "डिफ़ॉल्ट फ़ाइल सहेजने का स्थान"
+
+msgid "Define the Copy label in WhatsApp Desktop."
+msgstr "WhatsApp डेस्कटॉप में कॉपी लेबल परिभाषित करें।"
+
+# Hata mesajları 
+
+msgid "Define the Download label in WhatsApp Desktop."
+msgstr "WhatsApp Desktop में “डाउनलोड करें” लेबल निर्धारित करें।"
+
+msgid "Enter the context-menu \"Copy\" text as shown in WhatsApp Desktop (e.g. \"Copy\", \"Kopyala\", \"複製\")."
+msgstr "संदर्भ मेनू का “कॉपी करें” पाठ वैसा ही दर्ज करें जैसा WhatsApp Desktop में दिखता है (e.g. \"Copy\", \"Kopyala\", \"複製\")।"
+
+msgid "Enter the context-menu \"Download\" text as shown in WhatsApp Desktop (e.g. \"Download\", \"İndir\", \"下載\"). Use \";\" to separate multiple equivalents."
+msgstr "संदर्भ मेनू का “डाउनलोड करें” पाठ वैसा ही दर्ज करें जैसा WhatsApp Desktop में दिखता है (e.g. \"Download\", \"İndir\", \"下載\")। एक से अधिक समकक्षों को अलग करने के लिए “;” का उपयोग करें।"
+
+msgid "Failed to open the menu."
+msgstr "मेनू खोलने में विफल।"
+
+msgid "Failed to retrieve file from clipboard."
+msgstr "क्लिपबोर्ड से फ़ाइल प्राप्त करने में विफल।"
+
+msgid "Invalid procedure or file path."
+msgstr "अमान्य प्रक्रिया या फ़ाइल पथ।"
+
+msgid "Koruz.biz MurText"
+msgstr "Koruz.biz MurText"
+
+msgid "MurText"
+msgstr "MurText"
+
+msgid "MurText - Select task type"
+msgstr "MurText - कार्य का प्रकार चुनें"
+
+msgid "MurText is waiting for the download to finish."
+msgstr "MurText डाउनलोड पूरा होने की प्रतीक्षा कर रहा है।"
 
 msgid "MurText not found"
 msgstr "MurText नहीं मिला"
 
-msgid "You cannot proceed without MurText, a free application. Would you like to download it?"
-msgstr "आप मुफ्त एप्लिकेशन MurText के बिना आगे नहीं बढ़ सकते। क्या आप इसे डाउनलोड करना चाहेंगे?"
+msgid "Opening with MurText. Preparing the application."
+msgstr "MurText के साथ खोला जा रहा है। एप्लिकेशन तैयार किया जा रहा है।"
+
+msgid "Please switch modes first with NVDA+SPACE."
+msgstr "कृपया पहले NVDA+SPACE से मोड बदलें।"
+
+msgid "Remember my choice"
+msgstr "मेरा चयन याद रखें"
+
+msgid "Save audio / video files to the folder"
+msgstr "ऑडियो / वीडियो फ़ाइलें फ़ोल्डर में सहेजें"
+
+msgid "Save the file"
+msgstr "फ़ाइल सहेजें"
+
+msgid "Select folder"
+msgstr "फ़ोल्डर चुनें"
+
+msgid "Select the save folder"
+msgstr "सहेजने का फ़ोल्डर चुनें"
+
+msgid "Send audio / video files to MurText"
+msgstr "ऑडियो / वीडियो फ़ाइलें MurText को भेजें"
+
+msgid "Send the file to MurText"
+msgstr "फ़ाइल MurText को भेजें"
+
+msgid "Specify the task type"
+msgstr "कार्य का प्रकार निर्धारित करें"
+
+msgid "The downloaded file was not found. Check the browser's download location."
+msgstr "डाउनलोड की गई फ़ाइल नहीं मिली। ब्राउज़र का डाउनलोड स्थान जाँचें।"
+
+msgid "The file could not be saved."
+msgstr "फ़ाइल सहेजी नहीं जा सकी।"
+
+msgid "The file has not been downloaded yet or the Copy option is unavailable. Please open the Settings dialog and save the Copy label you see in WhatsApp’s context menu."
+msgstr "फ़ाइल अभी तक डाउनलोड नहीं हुई है या कॉपी विकल्प उपलब्ध नहीं है। कृपया सेटिंग्स डायलॉग खोलें और WhatsApp के संदर्भ मेनू में दिखाई देने वाला कॉपी लेबल सहेजें।"
+
+msgid "The file is downloading. Please try again in a few seconds."
+msgstr "फ़ाइल डाउनलोड हो रही है। कृपया कुछ सेकंड बाद फिर प्रयास करें।"
+
+msgid "The file was saved with MurText."
+msgstr "फ़ाइल MurText के साथ सहेजी गई।"
+
+msgid "The message's menu button was not found. Move focus to the first line of the message and try again."
+msgstr "संदेश का मेनू बटन नहीं मिला। फ़ोकस को संदेश की पहली पंक्ति पर ले जाएँ और फिर प्रयास करें।"
 
 msgid "The MurText add-on is not configured for this application."
 msgstr "MurText ऐड-ऑन इस एप्लिकेशन के लिए कॉन्फ़िगर नहीं किया गया है।"
+
+msgid "The selected item is not supported by MurText."
+msgstr "चयनित आइटम MurText द्वारा समर्थित नहीं है।"
+
+msgid "What would you like to do?"
+msgstr "आप क्या करना चाहते हैं?"
+
+msgid "You cannot proceed without MurText, a free application. Would you like to download it?"
+msgstr "आप मुफ्त एप्लिकेशन MurText के बिना आगे नहीं बढ़ सकते। क्या आप इसे डाउनलोड करना चाहेंगे?"

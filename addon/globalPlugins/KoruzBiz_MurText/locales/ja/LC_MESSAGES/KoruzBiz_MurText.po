@@ -5,92 +5,126 @@ msgstr ""
 "Language: ja\n"
 
 # 全般
-msgid "MurText"
-msgstr "MurText"
-
-msgid "Koruz.biz MurText"
-msgstr "Koruz.biz MurText"
-
-msgid "Default file save location"
-msgstr "ファイルの保存先（デフォルト）"
-
-msgid "Select the save folder"
-msgstr "保存フォルダーを選択"
-
-msgid "Default save folder for MurText"
-msgstr "MurTextのデフォルト保存フォルダー"
-
-msgid "Browse"
-msgstr "参照"
-
-msgid "copy"
-msgstr "コピー"
-
-msgid "Copy"
-msgstr "コピー"
-
-msgid "desktop"
-msgstr "デスクトップ"
-
-msgid "Desktop"
-msgstr "デスクトップ"
-
-msgid "explorer"
-msgstr "エクスプローラー"
-
-msgid "Explorer"
-msgstr "エクスプローラー"
-
-# WhatsApp
-msgid "The file was saved with MurText."
-msgstr "ファイルはMurTextで保存されました。"
-
-msgid "The file could not be saved."
-msgstr "ファイルを保存できませんでした。"
-
-msgid "Could not click the Copy option. Please open the Settings dialog and save the Copy label you see in WhatsApp’s context menu."
-msgstr "コピーオプションをクリックできませんでした。設定ダイアログを開き、WhatsAppのコンテキストメニューに表示されるコピーラベルを保存してください。"
-
-msgid "Failed to open the menu."
-msgstr "メニューの表示に失敗しました。"
-
-msgid "WhatsApp is not focused."
-msgstr "WhatsAppがフォーカスされていません。"
-
-msgid "Context menu not found."
-msgstr "コンテキストメニューが見つかりません。"
-
-msgid "The file has not been downloaded yet or the Copy option is unavailable. Please open the Settings dialog and save the Copy label you see in WhatsApp’s context menu."
-msgstr "ファイルはまだダウンロードされていないか、コピーオプションが利用できません。設定ダイアログを開き、WhatsAppのコンテキストメニューに表示されるコピーラベルを保存してください。"
-
-msgid "Define the Copy label in WhatsApp Desktop."
-msgstr "WhatsAppデスクトップでコピーラベルを定義してください。"
-
-# エラーメッセージ
-msgid "An error occurred."
-msgstr "エラーが発生しました。"
-
-msgid "Invalid procedure or file path."
-msgstr "無効な手順またはファイルパスです。"
-
-msgid "Failed to retrieve file from clipboard."
-msgstr "クリップボードからファイルを取得できませんでした。"
 
 msgid "An error occurred while identifying the application."
 msgstr "アプリケーションの識別中にエラーが発生しました。"
 
 # メッセージ
-msgid "Opening with MurText. Preparing the application."
-msgstr "MurTextで開いています。アプリケーションを準備中です。"
 
-msgid "The selected item is not supported by MurText."
-msgstr "選択された項目はMurTextではサポートされていません。"
+msgid "An error occurred."
+msgstr "エラーが発生しました。"
+
+msgid "Ask me every time"
+msgstr "毎回確認する"
+
+msgid "Copy"
+msgstr "コピー"
+
+# WhatsApp
+
+msgid "Copy or Download was not found in the menu. The file may not be downloaded yet, or the download may still be in progress; try again in a few seconds. If the problem persists, check the Copy and Download labels in the settings."
+msgstr "メニューに「コピー」も「ダウンロード」も見つかりませんでした。ファイルがまだダウンロードされていないか、ダウンロードが進行中の可能性があります。数秒後にもう一度お試しください。問題が続く場合は、設定の「コピー」と「ダウンロード」のラベルを確認してください。"
+
+msgid "Could not click the Copy option. Please open the Settings dialog and save the Copy label you see in WhatsApp’s context menu."
+msgstr "コピーオプションをクリックできませんでした。設定ダイアログを開き、WhatsAppのコンテキストメニューに表示されるコピーラベルを保存してください。"
+
+msgid "Default file save location"
+msgstr "ファイルの保存先（デフォルト）"
+
+msgid "Define the Copy label in WhatsApp Desktop."
+msgstr "WhatsAppデスクトップでコピーラベルを定義してください。"
+
+# エラーメッセージ
+
+msgid "Define the Download label in WhatsApp Desktop."
+msgstr "WhatsApp Desktop の「ダウンロード」ラベルを設定してください。"
+
+msgid "Enter the context-menu \"Copy\" text as shown in WhatsApp Desktop (e.g. \"Copy\", \"Kopyala\", \"複製\")."
+msgstr "WhatsApp Desktop に表示されるとおりに、コンテキストメニューの「コピー」のテキストを入力してください(e.g. \"Copy\", \"Kopyala\", \"複製\")。"
+
+msgid "Enter the context-menu \"Download\" text as shown in WhatsApp Desktop (e.g. \"Download\", \"İndir\", \"下載\"). Use \";\" to separate multiple equivalents."
+msgstr "WhatsApp Desktop に表示されるとおりに、コンテキストメニューの「ダウンロード」のテキストを入力してください(e.g. \"Download\", \"İndir\", \"下載\")。複数の表記を区切るには「;」を使用します。"
+
+msgid "Failed to open the menu."
+msgstr "メニューの表示に失敗しました。"
+
+msgid "Failed to retrieve file from clipboard."
+msgstr "クリップボードからファイルを取得できませんでした。"
+
+msgid "Invalid procedure or file path."
+msgstr "無効な手順またはファイルパスです。"
+
+msgid "Koruz.biz MurText"
+msgstr "Koruz.biz MurText"
+
+msgid "MurText"
+msgstr "MurText"
+
+msgid "MurText - Select task type"
+msgstr "MurText - タスクの種類を選択"
+
+msgid "MurText is waiting for the download to finish."
+msgstr "MurText はダウンロードの完了を待っています。"
 
 msgid "MurText not found"
 msgstr "MurTextが見つかりません"
 
-msgid "You cannot proceed without MurText, a free application. Would you like to download it?"
-msgstr "無料アプリMurTextがないと続行できません。ダウンロードしますか？"
+msgid "Opening with MurText. Preparing the application."
+msgstr "MurTextで開いています。アプリケーションを準備中です。"
+
+msgid "Please switch modes first with NVDA+SPACE."
+msgstr "先に NVDA+SPACE でモードを切り替えてください。"
+
+msgid "Remember my choice"
+msgstr "選択を記憶する"
+
+msgid "Save audio / video files to the folder"
+msgstr "音声 / 動画ファイルをフォルダーに保存"
+
+msgid "Save the file"
+msgstr "ファイルを保存"
+
+msgid "Select folder"
+msgstr "フォルダーを選択"
+
+msgid "Select the save folder"
+msgstr "保存フォルダーを選択"
+
+msgid "Send audio / video files to MurText"
+msgstr "音声 / 動画ファイルを MurText に送信"
+
+msgid "Send the file to MurText"
+msgstr "ファイルを MurText に送信"
+
+msgid "Specify the task type"
+msgstr "タスクの種類を指定してください"
+
+msgid "The downloaded file was not found. Check the browser's download location."
+msgstr "ダウンロードしたファイルが見つかりません。ブラウザーのダウンロード先を確認してください。"
+
+msgid "The file could not be saved."
+msgstr "ファイルを保存できませんでした。"
+
+msgid "The file has not been downloaded yet or the Copy option is unavailable. Please open the Settings dialog and save the Copy label you see in WhatsApp’s context menu."
+msgstr "ファイルはまだダウンロードされていないか、コピーオプションが利用できません。設定ダイアログを開き、WhatsAppのコンテキストメニューに表示されるコピーラベルを保存してください。"
+
+msgid "The file is downloading. Please try again in a few seconds."
+msgstr "ファイルをダウンロードしています。数秒後にもう一度お試しください。"
+
+msgid "The file was saved with MurText."
+msgstr "ファイルはMurTextで保存されました。"
+
+msgid "The message's menu button was not found. Move focus to the first line of the message and try again."
+msgstr "メッセージのメニューボタンが見つかりませんでした。フォーカスをメッセージの最初の行に移動して、もう一度お試しください。"
 
 msgid "The MurText add-on is not configured for this application."
 msgstr "MurTextアドオンはこのアプリケーションに設定されていません。"
+
+msgid "The selected item is not supported by MurText."
+msgstr "選択された項目はMurTextではサポートされていません。"
+
+msgid "What would you like to do?"
+msgstr "何をしますか?"
+
+msgid "You cannot proceed without MurText, a free application. Would you like to download it?"
+msgstr "無料アプリMurTextがないと続行できません。ダウンロードしますか？"

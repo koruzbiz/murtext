@@ -12,7 +12,7 @@ Usa la scorciatoia dell’intestazione (1) per visualizzare le note di rilascio.
 ## MurText
 Trascrizione gratuita e illimitata!
 Con un solo tasto di scelta rapida, trascrivi immediatamente file audio/video e messaggi vocali WhatsApp e genera file di sottotitoli.  
-Usa lo stesso tasto per salvare rapidamente altri file dall'app desktop di WhatsApp.
+Usa lo stesso tasto per salvare rapidamente altri file da WhatsApp Desktop e WhatsApp Web.
 
 **Tasto di scelta rapida:** NVDA + Alt + Q
 
@@ -27,6 +27,14 @@ Usa lo stesso tasto per salvare rapidamente altri file dall'app desktop di Whats
 	- Per altri tipi di file, salva il file nella directory predefinita.
 
 	# Note di rilascio
+## 3.0.3
+- Compatibilità con MurText 3.0.3 aggiunta.
+- Supporto per WhatsApp Web aggiunto insieme a WhatsApp Desktop: i passaggi Copia e Scarica ora funzionano in entrambi.
+- Impostazione del tipo di attività aggiunta: invia il file a MurText, salvalo in una cartella o chiedi ogni volta.
+- I file scaricati in Chrome o Edge da WhatsApp Web vengono rilevati automaticamente.
+- Aggiunto .wma alle estensioni di file supportate.
+- Traduzioni aggiornate.
+
 ## 3.0.1
 - Compatibilità con MurText 3.0.1 aggiunta.
 - Numero di estensioni file supportate aumentato.

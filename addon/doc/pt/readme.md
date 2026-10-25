@@ -12,7 +12,7 @@ Use o atalho de título (1) para ver as notas de versão.
 ## MurText
 Transcrição gratuita e ilimitada!
 Com um único atalho, transcreva arquivos de áudio/vídeo e mensagens de voz do WhatsApp instantaneamente e gere arquivos de legendas.
-Use o mesmo atalho para salvar rapidamente outros arquivos do aplicativo WhatsApp para desktop.
+Use o mesmo atalho para salvar rapidamente outros arquivos do WhatsApp Desktop e do WhatsApp Web.
 
 **Tecla de atalho:** NVDA + Alt + Q
 
@@ -27,6 +27,14 @@ Use o mesmo atalho para salvar rapidamente outros arquivos do aplicativo WhatsAp
 	- Para outros tipos de arquivo, salva o arquivo no diretório padrão.
 
 # Notas de versão
+## 3.0.3
+- Compatibilidade com MurText 3.0.3 adicionada.
+- Suporte ao WhatsApp Web adicionado junto ao WhatsApp Desktop: as etapas Copiar e Baixar agora funcionam em ambos.
+- Configuração de tipo de tarefa adicionada: enviar o arquivo ao MurText, salvá-lo em uma pasta ou perguntar a cada vez.
+- Arquivos baixados no Chrome ou no Edge a partir do WhatsApp Web são detectados automaticamente.
+- Adicionado .wma às extensões de arquivo suportadas.
+- Traduções atualizadas.
+
 ## 3.0.1
 - Compatibilidade com MurText 3.0.1 adicionada.
 - Número de extensões de arquivo suportadas aumentado.

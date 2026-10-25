@@ -7,11 +7,11 @@ msgstr ""
 msgid "Koruz.biz MurText"
 msgstr "Körüz.biz MurText"
 
-msgid "An NVDA add-on for the MurText application that converts audio/video files and WhatsApp voice messages into text in over 100 languages, and generates subtitles (.srt .vtt). Free and unlimited speech-to-text conversion! With a single shortcut, instantly convert audio/video files and WhatsApp voice messages into text. Use the same shortcut to quickly save other files from the WhatsApp desktop app."
-msgstr "100以上の言語で音声/動画ファイルとWhatsApp音声メッセージをテキストに変換し、字幕（.srt .vtt）を生成するMurTextアプリケーション用NVDAアドオン。無料・無制限の音声テキスト変換！ひとつのショートカットで、音声/動画ファイルとWhatsApp音声メッセージを即座にテキストに変換できます。同じショートカットを使ってWhatsAppデスクトップアプリから他のファイルを素早く保存できます。"
+msgid "An NVDA add-on for the MurText application that converts audio/video files and WhatsApp voice messages into text in over 100 languages, and generates subtitles (.srt .vtt). Free and unlimited speech-to-text conversion! With a single shortcut, instantly convert audio/video files and WhatsApp voice messages into text. Use the same shortcut to quickly save other files from WhatsApp Desktop and WhatsApp Web."
+msgstr "100以上の言語で音声/動画ファイルとWhatsApp音声メッセージをテキストに変換し、字幕（.srt .vtt）を生成するMurTextアプリケーション用NVDAアドオン。無料・無制限の音声テキスト変換！ひとつのショートカットで、音声/動画ファイルとWhatsApp音声メッセージを即座にテキストに変換できます。同じショートカットを使ってWhatsApp DesktopおよびWhatsApp Webから他のファイルを素早く保存できます。"
 
-msgid "Compatibility with MurText 3.0.1. Updated speaker recognition and subtitle file generation workflow. WhatsApp Desktop compatibility updates applied."
-msgstr "MurText 3.0.1との互換性。話者認識および字幕ファイル生成ワークフローを更新。WhatsApp Desktop互換性アップデートを適用。"
+msgid "Compatibility with MurText 3.0.3. Updated speaker recognition and subtitle file generation workflow. WhatsApp Desktop and WhatsApp Web compatibility updates applied."
+msgstr "MurText 3.0.3との互換性。話者認識および字幕ファイル生成ワークフローを更新。WhatsApp DesktopおよびWhatsApp Webの互換性アップデートを適用。"
 
 msgid "Koruz.biz MurText mp3/mp4 convert to TXT, SRT, VTT"
 msgstr "Koruz.biz MurText mp3/mp4 convert to TXT, SRT, VTT"

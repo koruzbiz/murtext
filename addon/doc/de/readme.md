@@ -12,7 +12,7 @@ Verwenden Sie die Überschriftentaste (1), um die Versionshinweise anzuzeigen.
 ## MurText
 Kostenlose und unbegrenzte Transkription!
 Mit einer einzigen Tastenkombination können Sie Audio-/Videodateien und WhatsApp-Sprachnachrichten sofort transkribieren und Untertiteldateien erstellen.  
-Verwenden Sie dieselbe Tastenkombination, um andere Dateien aus der WhatsApp-Desktop-App schnell zu speichern.
+Verwenden Sie dieselbe Tastenkombination, um andere Dateien aus WhatsApp Desktop und WhatsApp Web schnell zu speichern.
 
 **Tastenkombination:** NVDA + Alt + Q
 
@@ -27,6 +27,14 @@ Verwenden Sie dieselbe Tastenkombination, um andere Dateien aus der WhatsApp-Des
 	- Bei anderen Dateitypen speichert sie die Datei im Standardverzeichnis.
 
 # Versionshinweise
+## 3.0.3
+- Kompatibilität mit MurText 3.0.3 hinzugefügt.
+- Unterstützung für WhatsApp Web neben WhatsApp Desktop hinzugefügt: Die Schritte Kopieren und Herunterladen funktionieren jetzt in beiden.
+- Einstellung für den Aufgabentyp hinzugefügt: Datei an MurText senden, in einem Ordner speichern oder jedes Mal nachfragen.
+- In WhatsApp Web mit Chrome oder Edge heruntergeladene Dateien werden automatisch erkannt.
+- .wma zu den unterstützten Dateierweiterungen hinzugefügt.
+- Übersetzungen aktualisiert.
+
 ## 3.0.1
 - Kompatibilität mit MurText 3.0.1 hinzugefügt.
 - Anzahl der unterstützten Dateierweiterungen erhöht.

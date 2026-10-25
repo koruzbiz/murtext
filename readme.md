@@ -14,7 +14,7 @@ Use the heading shortcut (1) to view the release notes.
 Free and unlimited transcription!
 
 With a single shortcut, transcribe audio/video files and WhatsApp voice messages instantly, and generate subtitle files.  
-Use the same shortcut to quickly save other files from the WhatsApp desktop app.
+Use the same shortcut to quickly save other files from WhatsApp Desktop and WhatsApp Web.
 
 **Shortcut key:** NVDA + Alt + Q
 
@@ -30,6 +30,14 @@ Use the same shortcut to quickly save other files from the WhatsApp desktop app.
 
 
 	# Release Notes
+## 3.0.3
+- Added compatibility with MurText 3.0.3.
+- Added WhatsApp Web support alongside WhatsApp Desktop: the Copy and Download steps now work in both.
+- Added a task type setting: send the file to MurText, save it to a folder, or ask each time.
+- Files downloaded in Chrome or Edge from WhatsApp Web are detected automatically.
+- Added .wma to the supported file extensions.
+- Updated translations.
+
 ## 3.0.1
 - Added compatibility with MurText 3.0.1.
 - Increased number of supported file extensions.

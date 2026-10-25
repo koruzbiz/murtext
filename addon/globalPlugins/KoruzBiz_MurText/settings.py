@@ -1,8 +1,6 @@
 ﻿import os
 import wx
-import speech
 from config import conf
-import gettext
 import locale
 
 # Taban sınıfı ve kayıt API'sini doğrudan al:
@@ -40,6 +38,10 @@ SECTION = "KoruzBiz_MurText"
 KEY_OUTPUT_DIR = "outputDir"
 KEY_COPY_KEY = "copy_key_val"
 KEY_COPY_SOURCE = "copy_key_source"  # 'manual_map' veya 'gettext_fallback' veya 'manual_user'
+KEY_AV_TASK = "av_task_type"
+KEY_AV_TASK_USER = "av_task_user_set"
+KEY_DOWNLOAD_KEY = "download_key_val"
+KEY_DOWNLOAD_SOURCE = "download_key_source"  # 'manual_map' veya 'default_en' veya 'manual_user'
 
 # Mini sözlük
 _MANUAL_COPY_MAP= {
@@ -98,6 +100,52 @@ _MANUAL_COPY_MAP= {
     'fil': 'Kopyahin',
     'ur': 'کاپی',
 }
+# İndir sözlüğü: birden fazla karşılık ';' ile ayrılır. Listede olmayan diller için kullanıcı ayarlardan kendi etiketini girer.
+_MANUAL_DOWNLOAD_MAP = {
+    'en': 'Download',
+    'tr': 'İndir',
+    'es': 'Descargar',
+    'fr': 'Télécharger',
+    'de': 'Herunterladen;Download',
+    'it': 'Scarica',
+    'pt': 'Baixar;Transferir',
+    'nl': 'Downloaden',
+    'ru': 'Скачать;Загрузить',
+    'bg': 'Изтегляне;Изтегли',
+    'pl': 'Pobierz',
+    'sv': 'Ladda ned',
+    'no': 'Last ned',
+    'da': 'Download;Hent',
+    'fi': 'Lataa',
+    'cs': 'Stáhnout',
+    'sk': 'Stiahnuť',
+    'hu': 'Letöltés',
+    'ro': 'Descarcă',
+    'el': 'Λήψη',
+    'ja': 'ダウンロード',
+    'ko': '다운로드',
+    'zh_CN': '下载',
+    'zh_TW': '下載',
+    'zh_HK': '下載',
+    'vi': 'Tải xuống',
+    'id': 'Unduh',
+    'ms': 'Muat turun',
+    'th': 'ดาวน์โหลด',
+    'he': 'הורדה;הורד',
+    'ar': 'تنزيل',
+    'hi': 'डाउनलोड करें;डाउनलोड',
+    'uk': 'Завантажити',
+    'fa': 'دانلود;بارگیری',
+    'hr': 'Preuzmi',
+    'sr': 'Преузми;Preuzmi',
+    'sl': 'Prenesi',
+    'et': 'Laadi alla',
+    'lv': 'Lejupielādēt',
+    'lt': 'Atsisiųsti',
+    'fil': 'I-download',
+    'ur': 'ڈاؤن لوڈ',
+}
+
 def _get_documents_dir() -> str:
     try:
         import ctypes, ctypes.wintypes as wt
@@ -116,71 +164,53 @@ def _ensure_defaults():
     if not conf[SECTION].get(KEY_OUTPUT_DIR):
         conf[SECTION][KEY_OUTPUT_DIR] = _get_documents_dir()
         conf.save()
+    if conf[SECTION].get(KEY_AV_TASK) is None:
+        conf[SECTION][KEY_AV_TASK] = 2
 
-def _find_copy():
-    # Hazırla
-    if SECTION not in conf:
-        conf[SECTION] = {}
-
-    # Eğer zaten varsa çık
-    if conf[SECTION].get(KEY_COPY_KEY):
-        logger.info("Zaten copy anahtarı mevcut; atlandı.")
-        return conf[SECTION][KEY_COPY_KEY]
-
-    # 1) OS dilini al
-    lang_code = None
+def _dil_kodlari():
+    """OS dilinden (örn. 'tr_TR', 'zh_TW') sözlük anahtarı adaylarını sırayla döndürür."""
     try:
         loc = locale.getdefaultlocale()
-        if loc and loc[0]:
-            lang_code = loc[0]  # örn 'tr_TR' veya 'zh_TW'
+        lang_code = loc[0] if loc and loc[0] else None
     except Exception:
         lang_code = None
+    if not lang_code:
+        return []
+    normalized = lang_code.replace('-', '_')
+    kisa = normalized.split('_')[0]
+    if kisa == 'zh':
+        bolge = normalized.upper()
+        return ['zh_TW' if ('TW' in bolge or 'HK' in bolge or 'MO' in bolge) else 'zh_CN']
+    return [kisa]
 
-    # Normalize: küçük harf ve alt çizgi (örn 'tr', 'zh_TW')
-    normalized = None
-    lang_short = None
-    if lang_code:
-        normalized = lang_code.replace('-', '_')
-        lang_short = normalized.split('_')[0]
-
-    # 2) Mini sözlük kontrolü (öncelik: bölgesel zh varyantı, sonra kısa kod)
-    # Eğer zh ise bölgeyi netleştir
-    if lang_short == 'zh':
-        # Eğer 'zh_TW' veya 'zh_HK' gibi TW benzeri varsa TW, aksi halde CN
-        if normalized and ('TW' in normalized.upper() or 'HK' in normalized.upper() or 'MO' in normalized.upper()):
-            key = 'zh_TW'
-        else:
-            key = 'zh_CN'
-        val = _MANUAL_COPY_MAP.get(key)
+def _etiket_bul(anahtar, kaynak_anahtar, sozluk, varsayilan):
+    if SECTION not in conf:
+        conf[SECTION] = {}
+    if conf[SECTION].get(anahtar):
+        return conf[SECTION][anahtar]
+    for kod in _dil_kodlari():
+        val = sozluk.get(kod)
         if val:
-            conf[SECTION][KEY_COPY_KEY] = val
-            conf[SECTION][KEY_COPY_SOURCE] = 'manual_map'
+            conf[SECTION][anahtar] = val
+            conf[SECTION][kaynak_anahtar] = 'manual_map'
             conf.save()
-            logger.info(f"manual_map ile bulundu: {key} => {val}")
+            logger.info(f"manual_map ile bulundu: {anahtar} {kod} => {val}")
             return val
-
-    # Diğer diller için kısa kodu kontrol et 
-    if lang_short:
-        val = _MANUAL_COPY_MAP.get(lang_short)
-        if val:
-            conf[SECTION][KEY_COPY_KEY] = val
-            conf[SECTION][KEY_COPY_SOURCE] = 'manual_map'
-            conf.save()
-            logger.info(f"manual_map ile bulundu: {lang_short} => {val}")
-            return val
-
-    # 3) Mini sözlükte yoksa fallback: gettext ile 'Copy' çevirisini al 
-    try:
-        msg = tr('Copy')
-    except Exception:
-        msg = 'Copy'
-
-    # Kaydet ve çık
-    conf[SECTION][KEY_COPY_KEY] = msg
-    conf[SECTION][KEY_COPY_SOURCE] = 'gettext_fallback'
+    conf[SECTION][anahtar] = varsayilan
+    conf[SECTION][kaynak_anahtar] = 'gettext_fallback' if anahtar == KEY_COPY_KEY else 'default_en'
     conf.save()
-    logger.info(f"gettext fallback kaydedildi => {msg}")
-    return msg
+    logger.info(f"varsayılan kaydedildi: {anahtar} => {varsayilan}")
+    return varsayilan
+
+def _find_copy():
+    try:
+        varsayilan = tr('Copy')
+    except Exception:
+        varsayilan = 'Copy'
+    return _etiket_bul(KEY_COPY_KEY, KEY_COPY_SOURCE, _MANUAL_COPY_MAP, varsayilan)
+
+def _find_download():
+    return _etiket_bul(KEY_DOWNLOAD_KEY, KEY_DOWNLOAD_SOURCE, _MANUAL_DOWNLOAD_MAP, 'Download')
 
 class MurTextSettingsPanel(SettingsPanel):
     title = tr("Koruz.biz MurText")
@@ -188,22 +218,35 @@ class MurTextSettingsPanel(SettingsPanel):
     def makeSettings(self, sizer):
         _ensure_defaults()
 
-        grid = wx.FlexGridSizer(rows=3, cols=2, vgap=6, hgap=6)
+        grid = wx.FlexGridSizer(rows=5, cols=2, vgap=6, hgap=6)
         grid.AddGrowableCol(1, 1)
 
-        # Varsayılan dosya kayıt yeri
-        labelText = tr("Default file save location")
-        label = wx.StaticText(self, label=labelText + ":")
+        label_task = wx.StaticText(self, label=tr("Specify the task type") + ":")
+        grid.Add(label_task, flag=wx.ALIGN_CENTER_VERTICAL)
+        self.taskChoice = wx.Choice(self, choices=[
+            tr("Send audio / video files to MurText"),
+            tr("Save audio / video files to the folder"),
+            tr("Ask me every time"),
+        ])
+        try:
+            secim = int(conf[SECTION].get(KEY_AV_TASK, 2)) if conf[SECTION].get(KEY_AV_TASK_USER) else 0
+        except Exception:
+            secim = 0
+        self.taskChoice.SetSelection(secim if secim in (0, 1, 2) else 0)
+        self._taskTouched = False
+        self.taskChoice.Bind(wx.EVT_CHOICE, self._onTaskChoice)
+        grid.Add(self.taskChoice, flag=wx.EXPAND)
+
+        label = wx.StaticText(self, label=tr("Default file save location") + ":")
         grid.Add(label, flag=wx.ALIGN_CENTER_VERTICAL)
 
-        startPath = conf[SECTION].get(KEY_OUTPUT_DIR, _get_documents_dir())
-        self.dirPicker = wx.DirPickerCtrl(
-            self,
-            path=startPath,
-            message=tr("Select the save folder"),
-            style=wx.DIRP_DIR_MUST_EXIST | wx.DIRP_USE_TEXTCTRL
-        )
-        grid.Add(self.dirPicker, flag=wx.EXPAND)
+        self.dirText = wx.TextCtrl(self, value=conf[SECTION].get(KEY_OUTPUT_DIR, _get_documents_dir()))
+        self.dirButton = wx.Button(self, label=tr("Select folder"))
+        self.dirButton.Bind(wx.EVT_BUTTON, self._onSelectDir)
+        dirSizer = wx.BoxSizer(wx.HORIZONTAL)
+        dirSizer.Add(self.dirText, proportion=1, flag=wx.EXPAND | wx.RIGHT, border=6)
+        dirSizer.Add(self.dirButton)
+        grid.Add(dirSizer, flag=wx.EXPAND)
 
         # WP Desktop "Kopyala" karşılığı alanı
         #! WhatsApp Desktop Kopyala etiketi
@@ -217,29 +260,38 @@ class MurTextSettingsPanel(SettingsPanel):
             pass
         grid.Add(self.copyText, flag=wx.EXPAND)
 
-        # A11y: minimal müdahale
+        label_dl = wx.StaticText(self, label=tr("Define the Download label in WhatsApp Desktop.") + ":")
+        grid.Add(label_dl, flag=wx.ALIGN_CENTER_VERTICAL)
+        dl_val = conf[SECTION].get(KEY_DOWNLOAD_KEY, '')
+        self.downloadText = wx.TextCtrl(self, value=dl_val if dl_val else '', style=wx.TE_PROCESS_ENTER)
         try:
-            import ui  # NVDA konuşma API'sı
-            btn = self.dirPicker.GetPickerCtrl() if hasattr(self.dirPicker, "GetPickerCtrl") else None
-            if btn:
-                try:
-                    btn.SetName(tr("Browse"))
-                except Exception:
-                    pass
-                def _announce_after_browse_focus(evt):
-                    wx.CallLater(80, lambda: ui.message(labelText))
-                    evt.Skip()
-                btn.Bind(wx.EVT_SET_FOCUS, _announce_after_browse_focus)
+            self.downloadText.SetHelpText(tr('Enter the context-menu "Download" text as shown in WhatsApp Desktop (e.g. "Download", "İndir", "下載"). Use ";" to separate multiple equivalents.'))
         except Exception:
             pass
+        grid.Add(self.downloadText, flag=wx.EXPAND)
 
         sizer.Add(grid, flag=wx.ALL | wx.EXPAND, border=12)
 
+    def _onTaskChoice(self, evt):
+        self._taskTouched = True
+        evt.Skip()
+
+    def _onSelectDir(self, evt):
+        dlg = wx.DirDialog(self, message=tr("Select the save folder"), defaultPath=self.dirText.GetValue(), style=wx.DD_DEFAULT_STYLE | wx.DD_DIR_MUST_EXIST)
+        try:
+            if dlg.ShowModal() == wx.ID_OK:
+                self.dirText.SetValue(dlg.GetPath())
+        finally:
+            dlg.Destroy()
+
     def onSave(self):
         try:
+            if hasattr(self, "taskChoice") and (self._taskTouched or conf[SECTION].get(KEY_AV_TASK_USER)):
+                conf[SECTION][KEY_AV_TASK] = self.taskChoice.GetSelection()
+                conf[SECTION][KEY_AV_TASK_USER] = 1
             # Kayıt klasörü
-            if hasattr(self, "dirPicker"):
-                path = self.dirPicker.GetPath()
+            if hasattr(self, "dirText"):
+                path = self.dirText.GetValue().strip()
                 if path and os.path.isdir(path):
                     conf[SECTION][KEY_OUTPUT_DIR] = path
                     conf.save()
@@ -261,6 +313,15 @@ class MurTextSettingsPanel(SettingsPanel):
                             # Basitçe boş string ata fallback
                             conf[SECTION][KEY_COPY_KEY] = ''
                             conf[SECTION].pop(KEY_COPY_SOURCE, None)
+
+            if hasattr(self, 'downloadText'):
+                dval = self.downloadText.GetValue().strip()
+                if dval:
+                    conf[SECTION][KEY_DOWNLOAD_KEY] = dval
+                    conf[SECTION][KEY_DOWNLOAD_SOURCE] = 'manual_user'
+                else:
+                    conf[SECTION][KEY_DOWNLOAD_KEY] = ''
+                    conf[SECTION].pop(KEY_DOWNLOAD_SOURCE, None)
                 conf.save()
         except Exception:
             pass
@@ -287,13 +348,13 @@ def _register_settings_panel_once():
 
 _register_settings_panel_once()
 
-# Eklenti başlarken: sadece eğer key yoksa otomatik tespit çalışsın
+# Eklenti başlarken: anahtar yoksa otomatik tespit çalışsın
 try:
     if SECTION not in conf:
         conf[SECTION] = {}
     if not conf[SECTION].get(KEY_COPY_KEY):
-        _res = _find_copy()
-        logger.info(f"Otomatik tespit sonucu: {_res}")
+        logger.info(f"Otomatik tespit (Kopyala): {_find_copy()}")
+    if not conf[SECTION].get(KEY_DOWNLOAD_KEY):
+        logger.info(f"Otomatik tespit (İndir): {_find_download()}")
 except Exception:
-    # Sessiz kal
     pass

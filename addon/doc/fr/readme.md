@@ -13,7 +13,7 @@ Utilisez le raccourci de titre (1) pour afficher les notes de version.
 Transcription gratuite et illimitée !
 
 Avec un seul raccourci, transcrivez instantanément les fichiers audio/vidéo et les messages vocaux WhatsApp, et générez des fichiers de sous-titres.  
-Utilisez le même raccourci pour enregistrer rapidement d'autres fichiers depuis l'application WhatsApp pour bureau.
+Utilisez le même raccourci pour enregistrer rapidement d'autres fichiers depuis WhatsApp Desktop et WhatsApp Web.
 
 **Raccourci clavier :** NVDA + Alt + Q
 
@@ -29,6 +29,14 @@ Utilisez le même raccourci pour enregistrer rapidement d'autres fichiers depuis
 	- Pour les autres types de fichiers, il les enregistre dans le répertoire par défaut.
 
 # Notes de version
+## 3.0.3
+- Compatibilité avec MurText 3.0.3 ajoutée.
+- Prise en charge de WhatsApp Web ajoutée en plus de WhatsApp Desktop : les étapes Copier et Télécharger fonctionnent désormais dans les deux.
+- Paramètre de type de tâche ajouté : envoyer le fichier à MurText, l'enregistrer dans un dossier ou demander à chaque fois.
+- Les fichiers téléchargés dans Chrome ou Edge depuis WhatsApp Web sont détectés automatiquement.
+- Ajout de .wma aux extensions de fichiers prises en charge.
+- Traductions mises à jour.
+
 ## 3.0.1
 - Compatibilité avec MurText 3.0.1 ajoutée.
 - Nombre d'extensions de fichiers prises en charge augmenté.
